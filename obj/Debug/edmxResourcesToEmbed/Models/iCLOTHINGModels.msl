@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Group11_iCLOTHINGDBModelStoreContainer" CdmEntityContainer="Group11_iCLOTHINGDBEntities">
+    <EntitySetMapping Name="ABOUT_US">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.ABOUT_US">
+        <MappingFragment StoreEntitySet="ABOUT_US">
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="companyAddress" ColumnName="companyAddress" />
+          <ScalarProperty Name="companyShippingPolicy" ColumnName="companyShippingPolicy" />
+          <ScalarProperty Name="companyReturnPolicy" ColumnName="companyReturnPolicy" />
+          <ScalarProperty Name="companyContactInfo" ColumnName="companyContactInfo" />
+          <ScalarProperty Name="companyBusinessDescription" ColumnName="companyBusinessDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ADMINISTRATOR">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.ADMINISTRATOR">
+        <MappingFragment StoreEntitySet="ADMINISTRATOR">
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="adminName" ColumnName="adminName" />
+          <ScalarProperty Name="adminEmail" ColumnName="adminEmail" />
+          <ScalarProperty Name="dateHired" ColumnName="dateHired" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="BRAND">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.BRAND">
+        <MappingFragment StoreEntitySet="BRAND">
+          <ScalarProperty Name="brandID" ColumnName="brandID" />
+          <ScalarProperty Name="brandName" ColumnName="brandName" />
+          <ScalarProperty Name="brandDescription" ColumnName="brandDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CATEGORY">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.CATEGORY">
+        <MappingFragment StoreEntitySet="CATEGORY">
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+          <ScalarProperty Name="categoryDescription" ColumnName="categoryDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CUSTOMER">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.CUSTOMER">
+        <MappingFragment StoreEntitySet="CUSTOMER">
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="customerName" ColumnName="customerName" />
+          <ScalarProperty Name="customerShippingAddress" ColumnName="customerShippingAddress" />
+          <ScalarProperty Name="customerBillingAddress" ColumnName="customerBillingAddress" />
+          <ScalarProperty Name="customerDOB" ColumnName="customerDOB" />
+          <ScalarProperty Name="customerGender" ColumnName="customerGender" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEPARTMENT">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.DEPARTMENT">
+        <MappingFragment StoreEntitySet="DEPARTMENT">
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="departmentName" ColumnName="departmentName" />
+          <ScalarProperty Name="departmentDescription" ColumnName="departmentDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="PRODUCT">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.PRODUCT">
+        <MappingFragment StoreEntitySet="PRODUCT">
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="brandID" ColumnName="brandID" />
+          <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="departmentID" ColumnName="departmentID" />
+          <ScalarProperty Name="productName" ColumnName="productName" />
+          <ScalarProperty Name="productDescription" ColumnName="productDescription" />
+          <ScalarProperty Name="productPrice" ColumnName="productPrice" />
+          <ScalarProperty Name="productQty" ColumnName="productQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SHOPPING_CART">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.SHOPPING_CART">
+        <MappingFragment StoreEntitySet="SHOPPING_CART">
+          <ScalarProperty Name="cartID" ColumnName="cartID" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="cartProductPrice" ColumnName="cartProductPrice" />
+          <ScalarProperty Name="cartProductQty" ColumnName="cartProductQty" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_COMMENTS">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.USER_COMMENTS">
+        <MappingFragment StoreEntitySet="USER_COMMENTS">
+          <ScalarProperty Name="commentNo" ColumnName="commentNo" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="commentDate" ColumnName="commentDate" />
+          <ScalarProperty Name="commentDescription" ColumnName="commentDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_PASSWORD">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.USER_PASSWORD">
+        <MappingFragment StoreEntitySet="USER_PASSWORD">
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="userAccountName" ColumnName="userAccountName" />
+          <ScalarProperty Name="userEncryptedPassword" ColumnName="userEncryptedPassword" />
+          <ScalarProperty Name="passwordExpiryTime" ColumnName="passwordExpiryTime" />
+          <ScalarProperty Name="userAccountExpiryDate" ColumnName="userAccountExpiryDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="USER_QUERY">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.USER_QUERY">
+        <MappingFragment StoreEntitySet="USER_QUERY">
+          <ScalarProperty Name="queryNo" ColumnName="queryNo" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="queryDate" ColumnName="queryDate" />
+          <ScalarProperty Name="queryDescription" ColumnName="queryDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,223 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\user_querycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\user_querycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\user_passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\user_passwordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\user_commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\user_commentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\shopping_cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\shopping_cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\departmentscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\customerscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\brandscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\administratorscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\controllers\\about_uscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\about_uscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\models\\iclothingmodels.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\iclothingmodels.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "USER_QUERYController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_QUERYController.cs",
+              "RelativeDocumentMoniker": "Controllers\\USER_QUERYController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_QUERYController.cs",
+              "RelativeToolTip": "Controllers\\USER_QUERYController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:36:28.741Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "USER_PASSWORDController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_PASSWORDController.cs",
+              "RelativeDocumentMoniker": "Controllers\\USER_PASSWORDController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_PASSWORDController.cs",
+              "RelativeToolTip": "Controllers\\USER_PASSWORDController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:36:02.694Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "USER_COMMENTSController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_COMMENTSController.cs",
+              "RelativeDocumentMoniker": "Controllers\\USER_COMMENTSController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\USER_COMMENTSController.cs",
+              "RelativeToolTip": "Controllers\\USER_COMMENTSController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:35:18.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SHOPPING_CARTController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\SHOPPING_CARTController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SHOPPING_CARTController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\SHOPPING_CARTController.cs",
+              "RelativeToolTip": "Controllers\\SHOPPING_CARTController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:34:58.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "PRODUCTsController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\PRODUCTsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\PRODUCTsController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\PRODUCTsController.cs",
+              "RelativeToolTip": "Controllers\\PRODUCTsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:34:38.041Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DEPARTMENTsController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\DEPARTMENTsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\DEPARTMENTsController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\DEPARTMENTsController.cs",
+              "RelativeToolTip": "Controllers\\DEPARTMENTsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:33:59.874Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "CUSTOMERsController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\CUSTOMERsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CUSTOMERsController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\CUSTOMERsController.cs",
+              "RelativeToolTip": "Controllers\\CUSTOMERsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:33:39.012Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CATEGORiesController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\CATEGORiesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CATEGORiesController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\CATEGORiesController.cs",
+              "RelativeToolTip": "Controllers\\CATEGORiesController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:33:19.876Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "BRANDsController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\BRANDsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\BRANDsController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\BRANDsController.cs",
+              "RelativeToolTip": "Controllers\\BRANDsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:32:38.256Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ADMINISTRATORsController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\ADMINISTRATORsController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ADMINISTRATORsController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\ADMINISTRATORsController.cs",
+              "RelativeToolTip": "Controllers\\ADMINISTRATORsController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:32:15.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ABOUT_USController.cs",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\ABOUT_USController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ABOUT_USController.cs",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Controllers\\ABOUT_USController.cs",
+              "RelativeToolTip": "Controllers\\ABOUT_USController.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-26T21:31:45.717Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "iCLOTHINGModels.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Models\\iCLOTHINGModels.edmx",
+              "RelativeDocumentMoniker": "Models\\iCLOTHINGModels.edmx",
+              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Models\\iCLOTHINGModels.edmx [Diagram1]",
+              "RelativeToolTip": "Models\\iCLOTHINGModels.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-03-26T21:25:46.578Z",
+              "EditorCaption": " [Diagram1]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

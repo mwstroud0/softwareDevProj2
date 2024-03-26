@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Group11_iCLOTHINGDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="ABOUT_US">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="companyAddress" Type="varchar" MaxLength="200" />
+    <Property Name="companyShippingPolicy" Type="varchar" MaxLength="1000" />
+    <Property Name="companyReturnPolicy" Type="varchar" MaxLength="1000" />
+    <Property Name="companyContactInfo" Type="varchar" MaxLength="500" />
+    <Property Name="companyBusinessDescription" Type="varchar" MaxLength="1000" />
+  </EntityType>
+  <EntityType Name="ADMINISTRATOR">
+    <Key>
+      <PropertyRef Name="adminID" />
+    </Key>
+    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="adminName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="adminEmail" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="dateHired" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="BRAND">
+    <Key>
+      <PropertyRef Name="brandID" />
+    </Key>
+    <Property Name="brandID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="brandName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="brandDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="CATEGORY">
+    <Key>
+      <PropertyRef Name="categoryID" />
+    </Key>
+    <Property Name="categoryID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="categoryName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="categoryDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="CUSTOMER">
+    <Key>
+      <PropertyRef Name="customerID" />
+    </Key>
+    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customerName" Type="varchar" MaxLength="30" />
+    <Property Name="customerShippingAddress" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="customerBillingAddress" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="customerDOB" Type="date" />
+    <Property Name="customerGender" Type="varchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="DEPARTMENT">
+    <Key>
+      <PropertyRef Name="departmentID" />
+    </Key>
+    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="departmentName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="departmentDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="PRODUCT">
+    <Key>
+      <PropertyRef Name="productID" />
+    </Key>
+    <Property Name="productID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="brandID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="categoryID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="productName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="productDescription" Type="varchar" MaxLength="300" />
+    <Property Name="productPrice" Type="float" Nullable="false" />
+    <Property Name="productQty" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SHOPPING_CART">
+    <Key>
+      <PropertyRef Name="cartID" />
+    </Key>
+    <Property Name="cartID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="productID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cartProductPrice" Type="int" />
+    <Property Name="cartProductQty" Type="int" />
+  </EntityType>
+  <EntityType Name="USER_COMMENTS">
+    <Key>
+      <PropertyRef Name="commentNo" />
+    </Key>
+    <Property Name="commentNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="commentDate" Type="date" />
+    <Property Name="commentDescription" Type="varchar" MaxLength="200" />
+  </EntityType>
+  <EntityType Name="USER_PASSWORD">
+    <Key>
+      <PropertyRef Name="userID" />
+    </Key>
+    <Property Name="userID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="userAccountName" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="userEncryptedPassword" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="passwordExpiryTime" Type="int" Nullable="false" />
+    <Property Name="userAccountExpiryDate" Type="date" Nullable="false" />
+  </EntityType>
+  <EntityType Name="USER_QUERY">
+    <Key>
+      <PropertyRef Name="queryNo" />
+    </Key>
+    <Property Name="queryNo" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="queryDate" Type="date" Nullable="false" />
+    <Property Name="queryDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="FK__ABOUT_US__adminI__3E52440B">
+    <End Role="ADMINISTRATOR" Type="Self.ADMINISTRATOR" Multiplicity="1" />
+    <End Role="ABOUT_US" Type="Self.ABOUT_US" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRATOR">
+        <PropertyRef Name="adminID" />
+      </Principal>
+      <Dependent Role="ABOUT_US">
+        <PropertyRef Name="adminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CATEGORY__depart__44FF419A">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="1" />
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="departmentID" />
+      </Principal>
+      <Dependent Role="CATEGORY">
+        <PropertyRef Name="departmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PRODUCT__adminID__4CA06362">
+    <End Role="ADMINISTRATOR" Type="Self.ADMINISTRATOR" Multiplicity="1" />
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRATOR">
+        <PropertyRef Name="adminID" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="adminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PRODUCT__brandID__4AB81AF0">
+    <End Role="BRAND" Type="Self.BRAND" Multiplicity="1" />
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="BRAND">
+        <PropertyRef Name="brandID" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="brandID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PRODUCT__categor__4BAC3F29">
+    <End Role="CATEGORY" Type="Self.CATEGORY" Multiplicity="1" />
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CATEGORY">
+        <PropertyRef Name="categoryID" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="categoryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__PRODUCT__departm__4D94879B">
+    <End Role="DEPARTMENT" Type="Self.DEPARTMENT" Multiplicity="1" />
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DEPARTMENT">
+        <PropertyRef Name="departmentID" />
+      </Principal>
+      <Dependent Role="PRODUCT">
+        <PropertyRef Name="departmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SHOPPING___custo__534D60F1">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="SHOPPING_CART" Type="Self.SHOPPING_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="SHOPPING_CART">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SHOPPING___produ__5441852A">
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="1" />
+    <End Role="SHOPPING_CART" Type="Self.SHOPPING_CART" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="SHOPPING_CART">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USER_COMM__custo__5070F446">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="USER_COMMENTS" Type="Self.USER_COMMENTS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="USER_COMMENTS">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USER_PASS__userI__398D8EEE">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="USER_PASSWORD" Type="Self.USER_PASSWORD" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="USER_PASSWORD">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__USER_QUER__custo__47DBAE45">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="USER_QUERY" Type="Self.USER_QUERY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="USER_QUERY">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Group11_iCLOTHINGDBModelStoreContainer">
+    <EntitySet Name="ABOUT_US" EntityType="Self.ABOUT_US" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ADMINISTRATOR" EntityType="Self.ADMINISTRATOR" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="BRAND" EntityType="Self.BRAND" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SHOPPING_CART" EntityType="Self.SHOPPING_CART" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_COMMENTS" EntityType="Self.USER_COMMENTS" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_PASSWORD" EntityType="Self.USER_PASSWORD" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="USER_QUERY" EntityType="Self.USER_QUERY" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__ABOUT_US__adminI__3E52440B" Association="Self.FK__ABOUT_US__adminI__3E52440B">
+      <End Role="ADMINISTRATOR" EntitySet="ADMINISTRATOR" />
+      <End Role="ABOUT_US" EntitySet="ABOUT_US" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CATEGORY__depart__44FF419A" Association="Self.FK__CATEGORY__depart__44FF419A">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PRODUCT__adminID__4CA06362" Association="Self.FK__PRODUCT__adminID__4CA06362">
+      <End Role="ADMINISTRATOR" EntitySet="ADMINISTRATOR" />
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PRODUCT__brandID__4AB81AF0" Association="Self.FK__PRODUCT__brandID__4AB81AF0">
+      <End Role="BRAND" EntitySet="BRAND" />
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PRODUCT__categor__4BAC3F29" Association="Self.FK__PRODUCT__categor__4BAC3F29">
+      <End Role="CATEGORY" EntitySet="CATEGORY" />
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__PRODUCT__departm__4D94879B" Association="Self.FK__PRODUCT__departm__4D94879B">
+      <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SHOPPING___custo__534D60F1" Association="Self.FK__SHOPPING___custo__534D60F1">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SHOPPING___produ__5441852A" Association="Self.FK__SHOPPING___produ__5441852A">
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+      <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USER_COMM__custo__5070F446" Association="Self.FK__USER_COMM__custo__5070F446">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="USER_COMMENTS" EntitySet="USER_COMMENTS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USER_PASS__userI__398D8EEE" Association="Self.FK__USER_PASS__userI__398D8EEE">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="USER_PASSWORD" EntitySet="USER_PASSWORD" />
+    </AssociationSet>
+    <AssociationSet Name="FK__USER_QUER__custo__47DBAE45" Association="Self.FK__USER_QUER__custo__47DBAE45">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="USER_QUERY" EntitySet="USER_QUERY" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
