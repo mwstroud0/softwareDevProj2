@@ -10,7 +10,7 @@ using Group11_iCLOTHINGApp.Models;
 
 namespace Group11_iCLOTHINGApp.Controllers
 {
-    public class CUSTOMERsController : Controller
+    public class customersController : Controller
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 

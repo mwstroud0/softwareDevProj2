@@ -1,0 +1,38 @@
+﻿/* 
+    CS_4320
+    Group 11
+    Project 2
+    2024
+*/
+
+.group11nav {
+    justify-content:right;
+}
+
+.hero-container{
+
+}
+
+.hero {
+    background-image: url("/Content/img/gaetano-cessati-LOZKj-x6gDo-unsplash.jpg");
+    background-size: cover;
+    height: 600px;
+}
+
+.hero-text {
+    color: white;
+    margin:auto;
+    text-align: center;
+}
+
+.hero-text h1{
+    font-size: 70px;
+}
+
+.hero-text p {
+    font-size: 25px;
+}
+
+footer {
+    text-align: center;
+}
