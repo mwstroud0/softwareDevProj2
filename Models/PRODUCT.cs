@@ -17,14 +17,15 @@ namespace Group11_iCLOTHINGApp.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public PRODUCT()
         {
+            this.ITEM_DELIVERY = new HashSet<ITEM_DELIVERY>();
             this.SHOPPING_CART = new HashSet<SHOPPING_CART>();
         }
     
-        public string productID { get; set; }
-        public string brandID { get; set; }
-        public string categoryID { get; set; }
-        public string adminID { get; set; }
-        public string departmentID { get; set; }
+        public int productID { get; set; }
+        public int brandID { get; set; }
+        public int categoryID { get; set; }
+        public int adminID { get; set; }
+        public int departmentID { get; set; }
         public string productName { get; set; }
         public string productDescription { get; set; }
         public double productPrice { get; set; }
@@ -34,6 +35,8 @@ namespace Group11_iCLOTHINGApp.Models
         public virtual BRAND BRAND { get; set; }
         public virtual CATEGORY CATEGORY { get; set; }
         public virtual DEPARTMENT DEPARTMENT { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ITEM_DELIVERY> ITEM_DELIVERY { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SHOPPING_CART> SHOPPING_CART { get; set; }
     }

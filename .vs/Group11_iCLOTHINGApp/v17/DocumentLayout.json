@@ -1,32 +1,7 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:content\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\content\\group11.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:content\\group11.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\login\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\users\\mwstr\\source\\repos\\group11_iclothingapp\\views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\web.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    }
-  ],
+  "WorkspaceRootPath": "C:\\Users\\mwstr\\proj\\softwareDevProj2\\",
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -34,85 +9,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": -1,
           "Children": [
             {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Site.css",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Content\\Site.css",
-              "RelativeDocumentMoniker": "Content\\Site.css",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Content\\Site.css",
-              "RelativeToolTip": "Content\\Site.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAEAAAAPAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-28T01:33:17.851Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "group11.css",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Content\\group11.css",
-              "RelativeDocumentMoniker": "Content\\group11.css",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Content\\group11.css",
-              "RelativeToolTip": "Content\\group11.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-03-28T00:31:56.683Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\home\\Index.cshtml",
-              "RelativeToolTip": "Views\\home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAdAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-28T00:30:59.834Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Web.config",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\Web.config",
-              "RelativeDocumentMoniker": "Views\\Web.config",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\Web.config",
-              "RelativeToolTip": "Views\\Web.config",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAADJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2024-03-27T23:44:34.003Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\login\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\login\\Index.cshtml",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\login\\Index.cshtml",
-              "RelativeToolTip": "Views\\login\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAACYAAAANAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-27T22:33:49.221Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "_Layout.cshtml",
-              "DocumentMoniker": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\shared\\_Layout.cshtml",
-              "RelativeDocumentMoniker": "Views\\shared\\_Layout.cshtml",
-              "ToolTip": "C:\\Users\\mwstr\\source\\repos\\Group11_iCLOTHINGApp\\Views\\shared\\_Layout.cshtml",
-              "RelativeToolTip": "Views\\shared\\_Layout.cshtml",
-              "ViewState": "AQIAABIAAAAAAAAAAAAAAB4AAAAZAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-03-27T22:33:25.218Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

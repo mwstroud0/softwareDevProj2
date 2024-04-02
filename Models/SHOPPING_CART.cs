@@ -14,13 +14,21 @@ namespace Group11_iCLOTHINGApp.Models
     
     public partial class SHOPPING_CART
     {
-        public string cartID { get; set; }
-        public string customerID { get; set; }
-        public string productID { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public SHOPPING_CART()
+        {
+            this.ORDER_STATUS = new HashSet<ORDER_STATUS>();
+        }
+    
+        public int cartID { get; set; }
+        public int customerID { get; set; }
+        public int productID { get; set; }
         public Nullable<int> cartProductPrice { get; set; }
         public Nullable<int> cartProductQty { get; set; }
     
         public virtual CUSTOMER CUSTOMER { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ORDER_STATUS> ORDER_STATUS { get; set; }
         public virtual PRODUCT PRODUCT { get; set; }
     }
 }

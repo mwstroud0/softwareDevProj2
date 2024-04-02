@@ -14,7 +14,7 @@ namespace Group11_iCLOTHINGApp.Models
     
     public partial class ABOUT_US
     {
-        public string adminID { get; set; }
+        public int adminID { get; set; }
         public string companyAddress { get; set; }
         public string companyShippingPolicy { get; set; }
         public string companyReturnPolicy { get; set; }

@@ -17,23 +17,29 @@ namespace Group11_iCLOTHINGApp.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public CUSTOMER()
         {
+            this.EMAIL = new HashSet<EMAIL>();
+            this.ITEM_DELIVERY = new HashSet<ITEM_DELIVERY>();
             this.SHOPPING_CART = new HashSet<SHOPPING_CART>();
             this.USER_COMMENTS = new HashSet<USER_COMMENTS>();
             this.USER_QUERY = new HashSet<USER_QUERY>();
         }
     
-        public string customerID { get; set; }
+        public int customerID { get; set; }
         public string customerName { get; set; }
         public string customerShippingAddress { get; set; }
         public string customerBillingAddress { get; set; }
         public Nullable<System.DateTime> customerDOB { get; set; }
         public string customerGender { get; set; }
     
+        public virtual USER_PASSWORD USER_PASSWORD { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EMAIL> EMAIL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ITEM_DELIVERY> ITEM_DELIVERY { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<SHOPPING_CART> SHOPPING_CART { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_COMMENTS> USER_COMMENTS { get; set; }
-        public virtual USER_PASSWORD USER_PASSWORD { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<USER_QUERY> USER_QUERY { get; set; }
     }

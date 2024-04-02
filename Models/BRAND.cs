@@ -20,7 +20,7 @@ namespace Group11_iCLOTHINGApp.Models
             this.PRODUCT = new HashSet<PRODUCT>();
         }
     
-        public string brandID { get; set; }
+        public int brandID { get; set; }
         public string brandName { get; set; }
         public string brandDescription { get; set; }
     

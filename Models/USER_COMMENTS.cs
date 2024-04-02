@@ -14,8 +14,8 @@ namespace Group11_iCLOTHINGApp.Models
     
     public partial class USER_COMMENTS
     {
-        public string commentNo { get; set; }
-        public string customerID { get; set; }
+        public int commentNo { get; set; }
+        public int customerID { get; set; }
         public Nullable<System.DateTime> commentDate { get; set; }
         public string commentDescription { get; set; }
     

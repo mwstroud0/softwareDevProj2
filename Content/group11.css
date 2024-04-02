@@ -5,10 +5,6 @@
     2024
 */
 
-.group11nav {
-    justify-content:right;
-}
-
 .hero-container{
 
 }
@@ -35,4 +31,9 @@
 
 footer {
     text-align: center;
+}
+
+.btn-submit-blue {
+    background: rgb(22, 80, 172);
+    color: white;
 }

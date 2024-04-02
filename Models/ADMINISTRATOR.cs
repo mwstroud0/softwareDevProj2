@@ -17,15 +17,21 @@ namespace Group11_iCLOTHINGApp.Models
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public ADMINISTRATOR()
         {
+            this.EMAIL = new HashSet<EMAIL>();
+            this.ORDER_STATUS = new HashSet<ORDER_STATUS>();
             this.PRODUCT = new HashSet<PRODUCT>();
         }
     
-        public string adminID { get; set; }
+        public int adminID { get; set; }
         public string adminName { get; set; }
         public string adminEmail { get; set; }
         public System.DateTime dateHired { get; set; }
     
         public virtual ABOUT_US ABOUT_US { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<EMAIL> EMAIL { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ORDER_STATUS> ORDER_STATUS { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<PRODUCT> PRODUCT { get; set; }
     }

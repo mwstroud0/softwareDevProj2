@@ -21,7 +21,7 @@ namespace Group11_iCLOTHINGApp.Models
             this.PRODUCT = new HashSet<PRODUCT>();
         }
     
-        public string departmentID { get; set; }
+        public int departmentID { get; set; }
         public string departmentName { get; set; }
         public string departmentDescription { get; set; }
     

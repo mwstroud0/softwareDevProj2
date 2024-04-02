@@ -63,6 +63,39 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="EMAIL">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.EMAIL">
+        <MappingFragment StoreEntitySet="EMAIL">
+          <ScalarProperty Name="emailNo" ColumnName="emailNo" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="emailDate" ColumnName="emailDate" />
+          <ScalarProperty Name="emailSubject" ColumnName="emailSubject" />
+          <ScalarProperty Name="emailBody" ColumnName="emailBody" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ITEM_DELIVERY">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.ITEM_DELIVERY">
+        <MappingFragment StoreEntitySet="ITEM_DELIVERY">
+          <ScalarProperty Name="stickerID" ColumnName="stickerID" />
+          <ScalarProperty Name="customerID" ColumnName="customerID" />
+          <ScalarProperty Name="productID" ColumnName="productID" />
+          <ScalarProperty Name="stickerDate" ColumnName="stickerDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ORDER_STATUS">
+      <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.ORDER_STATUS">
+        <MappingFragment StoreEntitySet="ORDER_STATUS">
+          <ScalarProperty Name="statusID" ColumnName="statusID" />
+          <ScalarProperty Name="cartID" ColumnName="cartID" />
+          <ScalarProperty Name="adminID" ColumnName="adminID" />
+          <ScalarProperty Name="orderStatus" ColumnName="orderStatus" />
+          <ScalarProperty Name="statusDate" ColumnName="statusDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="PRODUCT">
       <EntityTypeMapping TypeName="Group11_iCLOTHINGDBModel.PRODUCT">
         <MappingFragment StoreEntitySet="PRODUCT">
