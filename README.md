@@ -3,6 +3,7 @@ CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
 # Software Requirements:
 1) Latest version of Microsoft SQL server Management Studio
 2) Visual Studio 2022 Community Edition
+   
     a) Installed components: ASP.Net and web development, .Net Desktop development, Data storage and processing
    
     b) Individual components: Advanced ASP.NET features, .NET Framework project and item templates,  .NET Framework 4.6 targeting pack, Visual Studio SDK, Modeling SDK, ASP.NET MVC 4, MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest), .NET Framework 4.7.2 SDK
