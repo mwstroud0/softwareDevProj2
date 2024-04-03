@@ -46,6 +46,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -54,8 +57,21 @@
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
@@ -130,13 +146,12 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\aboutUsController.cs" />
-    <Compile Include="Controllers\administratorController.cs" />
+    <Compile Include="Controllers\administratorsController.cs" />
     <Compile Include="Controllers\brandsController.cs" />
     <Compile Include="Controllers\categoriesController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\departmentsController.cs" />
-    <Compile Include="Controllers\loginController.cs" />
-    <Compile Include="Controllers\registerController.cs" />
+    <Compile Include="Controllers\loginRegisterController.cs" />
     <Compile Include="Controllers\homeController.cs" />
     <Compile Include="Controllers\productsController.cs" />
     <Compile Include="Controllers\shoppingCartController.cs" />
@@ -164,6 +179,9 @@
     <Compile Include="Models\DEPARTMENT.cs">
       <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\EMAIL.cs">
+      <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\iCLOTHINGModels.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -178,6 +196,12 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>iCLOTHINGModels.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ITEM_DELIVERY.cs">
+      <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ORDER_STATUS.cs">
+      <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\PRODUCT.cs">
       <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
@@ -218,8 +242,8 @@
     <Content Include="Content\Site.css" />
     <Content Include="Models\iCLOTHINGModels.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>iCLOTHINGModels.Context.cs</LastGenOutput>
       <DependentUpon>iCLOTHINGModels.edmx</DependentUpon>
+      <LastGenOutput>iCLOTHINGModels.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Models\iCLOTHINGModels.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -317,11 +341,12 @@
     <Content Include="Views\userQuery\Details.cshtml" />
     <Content Include="Views\userQuery\Edit.cshtml" />
     <Content Include="Views\userQuery\Index.cshtml" />
-    <Content Include="Views\register\Index.cshtml" />
-    <Content Include="Views\login\Index.cshtml" />
+    <Content Include="Views\loginRegister\Register.cshtml" />
+    <Content Include="Views\loginRegister\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\User\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

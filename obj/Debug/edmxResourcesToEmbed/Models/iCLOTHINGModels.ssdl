@@ -4,7 +4,7 @@
     <Key>
       <PropertyRef Name="adminID" />
     </Key>
-    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="adminID" Type="int" Nullable="false" />
     <Property Name="companyAddress" Type="varchar" MaxLength="200" />
     <Property Name="companyShippingPolicy" Type="varchar" MaxLength="1000" />
     <Property Name="companyReturnPolicy" Type="varchar" MaxLength="1000" />
@@ -15,7 +15,7 @@
     <Key>
       <PropertyRef Name="adminID" />
     </Key>
-    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="adminID" Type="int" Nullable="false" />
     <Property Name="adminName" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="adminEmail" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="dateHired" Type="date" Nullable="false" />
@@ -24,7 +24,7 @@
     <Key>
       <PropertyRef Name="brandID" />
     </Key>
-    <Property Name="brandID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="brandID" Type="int" Nullable="false" />
     <Property Name="brandName" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="brandDescription" Type="varchar" MaxLength="300" />
   </EntityType>
@@ -32,8 +32,8 @@
     <Key>
       <PropertyRef Name="categoryID" />
     </Key>
-    <Property Name="categoryID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+    <Property Name="departmentID" Type="int" Nullable="false" />
     <Property Name="categoryName" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="categoryDescription" Type="varchar" MaxLength="300" />
   </EntityType>
@@ -41,7 +41,7 @@
     <Key>
       <PropertyRef Name="customerID" />
     </Key>
-    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
     <Property Name="customerName" Type="varchar" MaxLength="30" />
     <Property Name="customerShippingAddress" Type="varchar" MaxLength="200" Nullable="false" />
     <Property Name="customerBillingAddress" Type="varchar" MaxLength="200" Nullable="false" />
@@ -52,19 +52,49 @@
     <Key>
       <PropertyRef Name="departmentID" />
     </Key>
-    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="departmentID" Type="int" Nullable="false" />
     <Property Name="departmentName" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="departmentDescription" Type="varchar" MaxLength="300" />
+  </EntityType>
+  <EntityType Name="EMAIL">
+    <Key>
+      <PropertyRef Name="emailNo" />
+    </Key>
+    <Property Name="emailNo" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
+    <Property Name="adminID" Type="int" Nullable="false" />
+    <Property Name="emailDate" Type="date" />
+    <Property Name="emailSubject" Type="varchar" MaxLength="50" />
+    <Property Name="emailBody" Type="varchar" MaxLength="500" />
+  </EntityType>
+  <EntityType Name="ITEM_DELIVERY">
+    <Key>
+      <PropertyRef Name="stickerID" />
+    </Key>
+    <Property Name="stickerID" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="stickerDate" Type="date" />
+  </EntityType>
+  <EntityType Name="ORDER_STATUS">
+    <Key>
+      <PropertyRef Name="statusID" />
+    </Key>
+    <Property Name="statusID" Type="int" Nullable="false" />
+    <Property Name="cartID" Type="int" Nullable="false" />
+    <Property Name="adminID" Type="int" Nullable="false" />
+    <Property Name="orderStatus" Type="varchar" MaxLength="20" />
+    <Property Name="statusDate" Type="date" />
   </EntityType>
   <EntityType Name="PRODUCT">
     <Key>
       <PropertyRef Name="productID" />
     </Key>
-    <Property Name="productID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="brandID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="categoryID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="adminID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="departmentID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
+    <Property Name="brandID" Type="int" Nullable="false" />
+    <Property Name="categoryID" Type="int" Nullable="false" />
+    <Property Name="adminID" Type="int" Nullable="false" />
+    <Property Name="departmentID" Type="int" Nullable="false" />
     <Property Name="productName" Type="varchar" MaxLength="30" Nullable="false" />
     <Property Name="productDescription" Type="varchar" MaxLength="300" />
     <Property Name="productPrice" Type="float" Nullable="false" />
@@ -74,9 +104,9 @@
     <Key>
       <PropertyRef Name="cartID" />
     </Key>
-    <Property Name="cartID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="productID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="cartID" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
+    <Property Name="productID" Type="int" Nullable="false" />
     <Property Name="cartProductPrice" Type="int" />
     <Property Name="cartProductQty" Type="int" />
   </EntityType>
@@ -84,8 +114,8 @@
     <Key>
       <PropertyRef Name="commentNo" />
     </Key>
-    <Property Name="commentNo" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="commentNo" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
     <Property Name="commentDate" Type="date" />
     <Property Name="commentDescription" Type="varchar" MaxLength="200" />
   </EntityType>
@@ -93,18 +123,18 @@
     <Key>
       <PropertyRef Name="userID" />
     </Key>
-    <Property Name="userID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
     <Property Name="userAccountName" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="userEncryptedPassword" Type="varchar" MaxLength="30" Nullable="false" />
-    <Property Name="passwordExpiryTime" Type="int" Nullable="false" />
+    <Property Name="userEncryptedPassword" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="passwordExpiryTime" Type="date" Nullable="false" />
     <Property Name="userAccountExpiryDate" Type="date" Nullable="false" />
   </EntityType>
   <EntityType Name="USER_QUERY">
     <Key>
       <PropertyRef Name="queryNo" />
     </Key>
-    <Property Name="queryNo" Type="varchar" MaxLength="20" Nullable="false" />
-    <Property Name="customerID" Type="varchar" MaxLength="20" Nullable="false" />
+    <Property Name="queryNo" Type="int" Nullable="false" />
+    <Property Name="customerID" Type="int" Nullable="false" />
     <Property Name="queryDate" Type="date" Nullable="false" />
     <Property Name="queryDescription" Type="varchar" MaxLength="300" />
   </EntityType>
@@ -129,6 +159,90 @@
       </Principal>
       <Dependent Role="CATEGORY">
         <PropertyRef Name="departmentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CUSTOMER__custom__60A75C0F">
+    <End Role="USER_PASSWORD" Type="Self.USER_PASSWORD" Multiplicity="1" />
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="USER_PASSWORD">
+        <PropertyRef Name="userID" />
+      </Principal>
+      <Dependent Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EMAIL__adminID__5BE2A6F2">
+    <End Role="ADMINISTRATOR" Type="Self.ADMINISTRATOR" Multiplicity="1" />
+    <End Role="EMAIL" Type="Self.EMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRATOR">
+        <PropertyRef Name="adminID" />
+      </Principal>
+      <Dependent Role="EMAIL">
+        <PropertyRef Name="adminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__EMAIL__customerI__5AEE82B9">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="EMAIL" Type="Self.EMAIL" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="EMAIL">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ITEM_DELI__custo__5EBF139D">
+    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
+    <End Role="ITEM_DELIVERY" Type="Self.ITEM_DELIVERY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CUSTOMER">
+        <PropertyRef Name="customerID" />
+      </Principal>
+      <Dependent Role="ITEM_DELIVERY">
+        <PropertyRef Name="customerID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ITEM_DELI__produ__5FB337D6">
+    <End Role="PRODUCT" Type="Self.PRODUCT" Multiplicity="1" />
+    <End Role="ITEM_DELIVERY" Type="Self.ITEM_DELIVERY" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="PRODUCT">
+        <PropertyRef Name="productID" />
+      </Principal>
+      <Dependent Role="ITEM_DELIVERY">
+        <PropertyRef Name="productID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ORDER_STA__admin__5812160E">
+    <End Role="ADMINISTRATOR" Type="Self.ADMINISTRATOR" Multiplicity="1" />
+    <End Role="ORDER_STATUS" Type="Self.ORDER_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ADMINISTRATOR">
+        <PropertyRef Name="adminID" />
+      </Principal>
+      <Dependent Role="ORDER_STATUS">
+        <PropertyRef Name="adminID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__ORDER_STA__cartI__571DF1D5">
+    <End Role="SHOPPING_CART" Type="Self.SHOPPING_CART" Multiplicity="1" />
+    <End Role="ORDER_STATUS" Type="Self.ORDER_STATUS" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SHOPPING_CART">
+        <PropertyRef Name="cartID" />
+      </Principal>
+      <Dependent Role="ORDER_STATUS">
+        <PropertyRef Name="cartID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -216,18 +330,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__USER_PASS__userI__398D8EEE">
-    <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
-    <End Role="USER_PASSWORD" Type="Self.USER_PASSWORD" Multiplicity="0..1" />
-    <ReferentialConstraint>
-      <Principal Role="CUSTOMER">
-        <PropertyRef Name="customerID" />
-      </Principal>
-      <Dependent Role="USER_PASSWORD">
-        <PropertyRef Name="userID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__USER_QUER__custo__47DBAE45">
     <End Role="CUSTOMER" Type="Self.CUSTOMER" Multiplicity="1" />
     <End Role="USER_QUERY" Type="Self.USER_QUERY" Multiplicity="*" />
@@ -247,6 +349,9 @@
     <EntitySet Name="CATEGORY" EntityType="Self.CATEGORY" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="CUSTOMER" EntityType="Self.CUSTOMER" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="DEPARTMENT" EntityType="Self.DEPARTMENT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMAIL" EntityType="Self.EMAIL" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ITEM_DELIVERY" EntityType="Self.ITEM_DELIVERY" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ORDER_STATUS" EntityType="Self.ORDER_STATUS" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="PRODUCT" EntityType="Self.PRODUCT" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="SHOPPING_CART" EntityType="Self.SHOPPING_CART" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="USER_COMMENTS" EntityType="Self.USER_COMMENTS" Schema="dbo" store:Type="Tables" />
@@ -259,6 +364,34 @@
     <AssociationSet Name="FK__CATEGORY__depart__44FF419A" Association="Self.FK__CATEGORY__depart__44FF419A">
       <End Role="DEPARTMENT" EntitySet="DEPARTMENT" />
       <End Role="CATEGORY" EntitySet="CATEGORY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CUSTOMER__custom__60A75C0F" Association="Self.FK__CUSTOMER__custom__60A75C0F">
+      <End Role="USER_PASSWORD" EntitySet="USER_PASSWORD" />
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EMAIL__adminID__5BE2A6F2" Association="Self.FK__EMAIL__adminID__5BE2A6F2">
+      <End Role="ADMINISTRATOR" EntitySet="ADMINISTRATOR" />
+      <End Role="EMAIL" EntitySet="EMAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__EMAIL__customerI__5AEE82B9" Association="Self.FK__EMAIL__customerI__5AEE82B9">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="EMAIL" EntitySet="EMAIL" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ITEM_DELI__custo__5EBF139D" Association="Self.FK__ITEM_DELI__custo__5EBF139D">
+      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
+      <End Role="ITEM_DELIVERY" EntitySet="ITEM_DELIVERY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ITEM_DELI__produ__5FB337D6" Association="Self.FK__ITEM_DELI__produ__5FB337D6">
+      <End Role="PRODUCT" EntitySet="PRODUCT" />
+      <End Role="ITEM_DELIVERY" EntitySet="ITEM_DELIVERY" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ORDER_STA__admin__5812160E" Association="Self.FK__ORDER_STA__admin__5812160E">
+      <End Role="ADMINISTRATOR" EntitySet="ADMINISTRATOR" />
+      <End Role="ORDER_STATUS" EntitySet="ORDER_STATUS" />
+    </AssociationSet>
+    <AssociationSet Name="FK__ORDER_STA__cartI__571DF1D5" Association="Self.FK__ORDER_STA__cartI__571DF1D5">
+      <End Role="SHOPPING_CART" EntitySet="SHOPPING_CART" />
+      <End Role="ORDER_STATUS" EntitySet="ORDER_STATUS" />
     </AssociationSet>
     <AssociationSet Name="FK__PRODUCT__adminID__4CA06362" Association="Self.FK__PRODUCT__adminID__4CA06362">
       <End Role="ADMINISTRATOR" EntitySet="ADMINISTRATOR" />
@@ -287,10 +420,6 @@
     <AssociationSet Name="FK__USER_COMM__custo__5070F446" Association="Self.FK__USER_COMM__custo__5070F446">
       <End Role="CUSTOMER" EntitySet="CUSTOMER" />
       <End Role="USER_COMMENTS" EntitySet="USER_COMMENTS" />
-    </AssociationSet>
-    <AssociationSet Name="FK__USER_PASS__userI__398D8EEE" Association="Self.FK__USER_PASS__userI__398D8EEE">
-      <End Role="CUSTOMER" EntitySet="CUSTOMER" />
-      <End Role="USER_PASSWORD" EntitySet="USER_PASSWORD" />
     </AssociationSet>
     <AssociationSet Name="FK__USER_QUER__custo__47DBAE45" Association="Self.FK__USER_QUER__custo__47DBAE45">
       <End Role="CUSTOMER" EntitySet="CUSTOMER" />

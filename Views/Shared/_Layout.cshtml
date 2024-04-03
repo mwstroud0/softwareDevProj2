@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,20 +12,51 @@
 <body>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
         <div class="container">
-            <a href="/"><img src="~/Content/img/logo.png" width="50px"/></a>
+            <a href="/"><img src="~/Content/img/logo.png" width="50px;" /></a>
             @Html.ActionLink("iCLOTHING", "Index", "home", new { area = "" }, new { @class = "navbar-brand" })
             <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                <ul class="group11nav navbar-nav flex-grow-1">
-                    <li>@Html.ActionLink("Browse Products", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Login", "Index", "login", new { area = "" }, new { @class = "nav-link" })</li>
+                <ul class="navbar-nav">
+                    @if (Session["UsernameSS"] != null && Session["UsernameSS"].Equals("admin"))
+                    {
+                        <li>@Html.ActionLink("Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Admins", "Index", "administrators", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Customer Info", "Index", "customers", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Departments", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Brands", "Index", "brands", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Categories", "Index", "categories", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("ShoppingCarts", "Index", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Passwords", "Index", "userPassword", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Comments", "Index", "userComments", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Browse Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
                 </ul>
-            </div>
+
+                    <ul class="navbar-nav flex-grow-1" style="float:right !important">
+                        @if (Session["UsernameSS"] != null)
+                        {
+                            <li><p style="color:white;margin-top:15px;">Hello @Session["UsernameSS"]</p></li>
+                            <li style="padding-top:7px;">@Html.ActionLink("Logout", "Logout", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Register", "Register", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Login", "Login", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+
+                    </ul>
+                </div>
+
         </div>
     </nav>
     <div class="container">

@@ -22,7 +22,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: USER_COMMENTS/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
@@ -62,7 +62,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: USER_COMMENTS/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
             if (id == null)
             {
@@ -95,7 +95,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: USER_COMMENTS/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
@@ -112,7 +112,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         // POST: USER_COMMENTS/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             USER_COMMENTS uSER_COMMENTS = db.USER_COMMENTS.Find(id);
             db.USER_COMMENTS.Remove(uSER_COMMENTS);

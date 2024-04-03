@@ -11,15 +11,31 @@ namespace Group11_iCLOTHINGApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class USER_PASSWORD
     {
-        public string userID { get; set; }
+        public int userID { get; set; }
+
+        [Required(ErrorMessage = "This field is required")]
+        [Display(Name = "Username")]
         public string userAccountName { get; set; }
+
+        [Required(ErrorMessage = "This field is required")]
+        [Display(Name = "Password")]
+        [DataType(DataType.Password)]
         public string userEncryptedPassword { get; set; }
-        public int passwordExpiryTime { get; set; }
+
+        [Required(ErrorMessage = "This field is required")]
+        [Display(Name = "Confirm Password")]
+        [DataType(DataType.Password)]
+        [NotMapped]
+        [Compare("userEncryptedPassword", ErrorMessage = "Confirmed Password does not match.")]
+        public string reEncryptedPassword { get; set; }
+        public System.DateTime passwordExpiryTime { get; set; }
         public System.DateTime userAccountExpiryDate { get; set; }
-    
+
         public virtual CUSTOMER CUSTOMER { get; set; }
     }
 }

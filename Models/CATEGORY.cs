@@ -20,9 +20,11 @@ namespace Group11_iCLOTHINGApp.Models
             this.PRODUCT = new HashSet<PRODUCT>();
         }
     
-        public string categoryID { get; set; }
-        public string departmentID { get; set; }
+        public int categoryID { get; set; }
+
         public string categoryName { get; set; }
+        public int departmentID { get; set; }
+        
         public string categoryDescription { get; set; }
     
         public virtual DEPARTMENT DEPARTMENT { get; set; }

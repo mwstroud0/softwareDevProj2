@@ -14,8 +14,8 @@ namespace Group11_iCLOTHINGApp.Models
     
     public partial class USER_QUERY
     {
-        public string queryNo { get; set; }
-        public string customerID { get; set; }
+        public int queryNo { get; set; }
+        public int customerID { get; set; }
         public System.DateTime queryDate { get; set; }
         public string queryDescription { get; set; }
     
