@@ -1,4 +1,4 @@
-# CS_4320 Project 2 - iCLOTHING  
+# CS_4320 Project 2 - iCLOTHING (Group11)
 CS_4320 Project 2: Implementing the iCLOTHING Application
 
 <img src="https://github.com/mwstroud0/softwareDevProj2/blob/main/Content/img/logo.png?raw=true" width="120" />
