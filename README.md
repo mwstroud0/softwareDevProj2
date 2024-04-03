@@ -1,5 +1,5 @@
 # CS_4320 Project 2 - iCLOTHING
-![iCLOTHING Logo]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/mwstroud0/softwareDevProj2/blob/main/Content/img/logo.png))
+![iCLOTHING Logo]([https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true](https://github.com/mwstroud0/softwareDevProj2/blob/main/Content/img/logo.png?raw=true))
 CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
 ## Software Requirements:
 1) Latest version of Microsoft SQL server Management Studio
