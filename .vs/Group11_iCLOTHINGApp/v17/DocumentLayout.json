@@ -3,32 +3,48 @@
   "WorkspaceRootPath": "C:\\proj\\softwareDevProj2\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\userquery\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\userquery\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\userpassword\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\userpassword\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\usercomments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\usercomments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\shoppingcart\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\products\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\products\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\departments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\departments\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\customers\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\loginregister\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\loginregister\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\brands\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\brands\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\content\\group11.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:content\\group11.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\administrators\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\administrators\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\products\\details.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\aboutus\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -44,87 +60,143 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\PRODUCTs\\Index.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Index.cshtml*",
-              "RelativeToolTip": "Views\\PRODUCTs\\Index.cshtml*",
-              "ViewState": "AQIAACoAAAAAAAAAAAAAADoAAAA/AAAA",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\userQuery\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\userQuery\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\userQuery\\Index.cshtml",
+              "RelativeToolTip": "Views\\userQuery\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAA2AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T00:02:34.44Z",
+              "WhenOpened": "2024-04-04T00:34:19.07Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\userPassword\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\userPassword\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\userPassword\\Index.cshtml",
+              "RelativeToolTip": "Views\\userPassword\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACUAAAA1AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:33:51.967Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CATEGORY.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\CATEGORY.cs",
-              "RelativeDocumentMoniker": "Models\\CATEGORY.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\CATEGORY.cs",
-              "RelativeToolTip": "Models\\CATEGORY.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwBoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-03T23:36:07.035Z",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\userComments\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\userComments\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\userComments\\Index.cshtml",
+              "RelativeToolTip": "Views\\userComments\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAB8AAAA4AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:33:07.559Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\loginRegister\\Login.cshtml",
-              "RelativeDocumentMoniker": "Views\\loginRegister\\Login.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\loginRegister\\Login.cshtml",
-              "RelativeToolTip": "Views\\loginRegister\\Login.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAABUAAAA6AAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\shoppingCart\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\Index.cshtml",
+              "RelativeToolTip": "Views\\shoppingCart\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACIAAAA1AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T01:33:05.355Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "group11.css",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
-              "RelativeDocumentMoniker": "Content\\group11.css",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
-              "RelativeToolTip": "Content\\group11.css",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-03T01:17:09.587Z"
+              "WhenOpened": "2024-04-04T00:32:34.71Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
               "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\PRODUCTs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Index.cshtml",
+              "RelativeToolTip": "Views\\PRODUCTs\\Index.cshtml",
+              "ViewState": "AQIAABsAAAAAAAAAAAAAAC4AAAA4AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T00:24:36.631Z"
+              "WhenOpened": "2024-04-04T00:32:10.934Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\DEPARTMENTs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\DEPARTMENTs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\DEPARTMENTs\\Index.cshtml",
+              "RelativeToolTip": "Views\\DEPARTMENTs\\Index.cshtml",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAABwAAAA7AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:31:48.446Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
-              "Title": "Details.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Details.cshtml",
-              "RelativeDocumentMoniker": "Views\\PRODUCTs\\Details.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Details.cshtml",
-              "RelativeToolTip": "Views\\PRODUCTs\\Details.cshtml",
-              "ViewState": "AQIAABsAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\CUSTOMERs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CUSTOMERs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\CUSTOMERs\\Index.cshtml",
+              "RelativeToolTip": "Views\\CUSTOMERs\\Index.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAAACgAAAA5AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T00:20:04.905Z"
+              "WhenOpened": "2024-04-04T00:31:25.558Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Create.cshtml",
-              "RelativeDocumentMoniker": "Views\\PRODUCTs\\Create.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\PRODUCTs\\Create.cshtml",
-              "RelativeToolTip": "Views\\PRODUCTs\\Create.cshtml",
-              "ViewState": "AQIAAEIAAAAAAAAAAAAcwCMAAAAjAAAA",
+              "DocumentIndex": 7,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\CATEGORies\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\CATEGORies\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\CATEGORies\\Index.cshtml",
+              "RelativeToolTip": "Views\\CATEGORies\\Index.cshtml",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-03T00:19:52.964Z",
+              "WhenOpened": "2024-04-04T00:28:11.278Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\BRANDs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\BRANDs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\BRANDs\\Index.cshtml",
+              "RelativeToolTip": "Views\\BRANDs\\Index.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:27:47.062Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\ADMINISTRATORs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\ADMINISTRATORs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\ADMINISTRATORs\\Index.cshtml",
+              "RelativeToolTip": "Views\\ADMINISTRATORs\\Index.cshtml",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAACAAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:27:16.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\aboutUs\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\aboutUs\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\aboutUs\\Index.cshtml",
+              "RelativeToolTip": "Views\\aboutUs\\Index.cshtml",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-04-04T00:26:25.167Z",
               "EditorCaption": ""
             }
           ]
