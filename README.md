@@ -25,5 +25,7 @@ CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
 
 # Application Features
 No-Login User View: Users are able to browse products all while being signed out.
+
 Logged-In Customer View: Customers who register, can login and purchase items from the website.
+
 Administrator View: When the administrator logs in, they have a special view to manage website data.
