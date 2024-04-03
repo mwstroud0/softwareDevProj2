@@ -1,0 +1,238 @@
+﻿@model IEnumerable<Group11_iCLOTHINGApp.Models.PRODUCT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2 style="text-align:center;">Customer Browse Page</h2>
+
+<div>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Mens</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Womens</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div style="margin-top: 2%;">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center" style="width:100%;">
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shoes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Shirts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Pants</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<table class="table-bordered" style="margin-left:20%;margin-right:20%;width: 60%;">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.productName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productDescription)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.productPrice)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.BRAND.brandName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CATEGORY.categoryName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DEPARTMENT.departmentName)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.productName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productDescription)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.productPrice)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.BRAND.brandName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CATEGORY.categoryName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DEPARTMENT.departmentName)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.productID })
+
+            </td>
+        </tr>
+    }
+
+</table>
+
+<div style="display: flex;">
+@foreach (var item in Model)
+{
+    <div style="width:25%;display:flex;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png"/>
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+}
+</div>
+
+<div style="display: flex; width: 99.99%; flex-wrap: wrap; outline: 5px solid black;">
+
+    <div style="width:33.33%;display:flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+            <div>
+                <button>Add to cart</button>
+                <button>Details</button>
+            </div>
+        </div>
+        <div>
+            <div style="display:flex;font-size:small;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 33.33%; display: flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 33.33%; display: flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 33.33%; display: flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 33.33%; display: flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+    <div style="width: 33.33%; display: flex; outline: 2px dotted black;">
+        <div>
+            <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+        </div>
+        <div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p style="overflow:hidden;">Name of product</p>
+            </div>
+            <div style="display: flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+            <div style="display:flex;">
+                <p>Product Name</p>
+                <p>Name of product</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
