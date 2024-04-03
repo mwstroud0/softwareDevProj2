@@ -1,6 +1,6 @@
 # CS_4320 Project 2 - iCLOTHING
 CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
-# Software Requirements:
+## Software Requirements:
 1) Latest version of Microsoft SQL server Management Studio
 2) Visual Studio 2022 Community Edition
    
@@ -8,7 +8,7 @@ CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
    
     b) Individual components: Advanced ASP.NET features, .NET Framework project and item templates,  .NET Framework 4.6 targeting pack, Visual Studio SDK, Modeling SDK, ASP.NET MVC 4, MSVC v143 - VS 2022 C++ x64/x86 build tools (Latest), .NET Framework 4.7.2 SDK
    
-# Run instructions:
+## Run instructions:
 1) Clone repository in a folder directly in C: root.
 2) Launch Microsoft SQL Server Management Studio as Administrator
 
@@ -37,7 +37,7 @@ CS_4320 Project 2: Implementing the iCLOTHING Application using Visual Studio
    
 6) ** IMPORTANT ** After restarting Visual Studio, Click the solid green triangle with text "IIS Express (Microsoft Edge)" to launch the application.
 
-# Application Features
+## Application Features
 No-Login User View: Users are able to browse products all while being signed out.
 
 Logged-In Customer View: Customers who register, can login and purchase items from the website.
