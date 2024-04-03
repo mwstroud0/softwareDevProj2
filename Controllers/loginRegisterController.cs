@@ -44,6 +44,8 @@ namespace Group11_iCLOTHINGApp.Controllers
                 uSER_PASSWORD.userAccountExpiryDate = currentDate.AddDays(1000);
                 uSER_PASSWORD.userID = db.USER_PASSWORD.Count() + 1;
                 db.USER_PASSWORD.Add(uSER_PASSWORD);
+                
+                // This try - catch is designed just to give more verbose error messages to db connection errors
                 try
                 {
                     db.SaveChanges();
@@ -73,7 +75,6 @@ namespace Group11_iCLOTHINGApp.Controllers
         {
             Session.Clear();
             return RedirectToAction("Index", "Home");
-
         }
 
         public ActionResult Login()

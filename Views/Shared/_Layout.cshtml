@@ -20,25 +20,42 @@
             </button>
             <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav">
-                    <li>@Html.ActionLink("Browse Products", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
-                    <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
-                </ul>
-
-                <ul class="navbar-nav flex-grow-1" style="float:right !important">
-                    @if (Session["UsernameSS"] != null)
+                    @if (Session["UsernameSS"] != null && Session["UsernameSS"].Equals("admin"))
                     {
-                        <li><p style="color:white;margin-top:15px;">Hello @Session["UsernameSS"]</p></li>
-                        <li style="padding-top:7px;">@Html.ActionLink("Logout", "Logout", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Admins", "Index", "administrators", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Customer Info", "Index", "customers", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Departments", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Brands", "Index", "brands", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Categories", "Index", "categories", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("ShoppingCarts", "Index", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Passwords", "Index", "userPassword", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Comments", "Index", "userComments", new { area = "" }, new { @class = "nav-link" })</li>
                     }
                     else
                     {
-                        <li>@Html.ActionLink("Register", "Register", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Login", "Login", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Browse Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
                     }
-
                 </ul>
-            </div>
+
+                    <ul class="navbar-nav flex-grow-1" style="float:right !important">
+                        @if (Session["UsernameSS"] != null)
+                        {
+                            <li><p style="color:white;margin-top:15px;">Hello @Session["UsernameSS"]</p></li>
+                            <li style="padding-top:7px;">@Html.ActionLink("Logout", "Logout", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+                        else
+                        {
+                            <li>@Html.ActionLink("Register", "Register", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                            <li>@Html.ActionLink("Login", "Login", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        }
+
+                    </ul>
+                </div>
 
         </div>
     </nav>
