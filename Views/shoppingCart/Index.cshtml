@@ -12,6 +12,9 @@
 <table class="table">
     <tr>
         <th>
+            @Html.DisplayNameFor(model => model.cartID)
+        </th>
+        <th>
             @Html.DisplayNameFor(model => model.cartProductPrice)
         </th>
         <th>
@@ -29,6 +32,9 @@
 @foreach (var item in Model) {
     <tr>
         <td>
+            @Html.DisplayFor(modelItem => item.cartID)
+        </td>
+        <td>
             @Html.DisplayFor(modelItem => item.cartProductPrice)
         </td>
         <td>
@@ -41,9 +47,9 @@
             @Html.DisplayFor(modelItem => item.PRODUCT.brandID)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.cartID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.cartID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.cartID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.cartID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.cartID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.cartID })
         </td>
     </tr>
 }
