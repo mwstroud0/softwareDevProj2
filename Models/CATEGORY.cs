@@ -21,8 +21,10 @@ namespace Group11_iCLOTHINGApp.Models
         }
     
         public int categoryID { get; set; }
-        public int departmentID { get; set; }
+
         public string categoryName { get; set; }
+        public int departmentID { get; set; }
+        
         public string categoryDescription { get; set; }
     
         public virtual DEPARTMENT DEPARTMENT { get; set; }

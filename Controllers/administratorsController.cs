@@ -10,7 +10,7 @@ using Group11_iCLOTHINGApp.Models;
 
 namespace Group11_iCLOTHINGApp.Controllers
 {
-    public class administratorController : Controller
+    public class administratorsController : Controller
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
@@ -22,7 +22,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: ADMINISTRATORs/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
@@ -62,7 +62,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: ADMINISTRATORs/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
             if (id == null)
             {
@@ -95,7 +95,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: ADMINISTRATORs/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
@@ -112,7 +112,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         // POST: ADMINISTRATORs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             ADMINISTRATOR aDMINISTRATOR = db.ADMINISTRATOR.Find(id);
             db.ADMINISTRATOR.Remove(aDMINISTRATOR);

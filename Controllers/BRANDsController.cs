@@ -21,7 +21,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: BRANDs/Details/5
-        public ActionResult Details(string id)
+        public ActionResult Details(int id)
         {
             if (id == null)
             {
@@ -59,7 +59,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: BRANDs/Edit/5
-        public ActionResult Edit(string id)
+        public ActionResult Edit(int id)
         {
             if (id == null)
             {
@@ -90,7 +90,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
 
         // GET: BRANDs/Delete/5
-        public ActionResult Delete(string id)
+        public ActionResult Delete(int id)
         {
             if (id == null)
             {
@@ -107,7 +107,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         // POST: BRANDs/Delete/5
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(string id)
+        public ActionResult DeleteConfirmed(int id)
         {
             BRAND bRAND = db.BRAND.Find(id);
             db.BRAND.Remove(bRAND);
