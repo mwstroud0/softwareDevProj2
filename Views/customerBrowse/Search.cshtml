@@ -4,24 +4,17 @@
     ViewBag.Title = "Index";
 }
 
+<h2 style="text-align:center;font-family:cursive;margin-top:2%;margin-bottom:2%;">Customer Browse Page</h2>
 
-<div style="display:inline-flex;width:100%;">
-    <img src="~/Content/img/logo.png" style="width:10%;height:5%;margin-left:15%"/>
-    <div style="width:50%;">
-        <h2 style="text-align:center;font-family:cursive;margin-top:2%;margin-bottom:2%;">Customer Browse Page</h2>
-
-        @using (Html.BeginForm("Search", "customerBrowse", FormMethod.Get))
-        {
-            <div style="display:flex; width:50%;justify-content:center; margin-left:25%;">
-                <div class="form-control bg-black">
-                    @Html.TextBox("Search", null, new { placeholder = "Search for a product..." })
-                    <button type="submit" class="btn btn-danger btn-sm">Search</button>
-                </div>
-            </div>
-        }
+@using (Html.BeginForm("Search", "customerBrowse", FormMethod.Get))
+{
+    <div style="display:flex; width:22%;justify-content:center; margin-left:39%;">
+        <div class="form-control bg-black">
+            @Html.TextBox("Search", null, new { placeholder = "Search for a product..." })
+            <button type="submit" class="btn btn-danger btn-sm">Search</button>
+        </div>
     </div>
-    <img src="~/Content/img/logo.png" style="width:10%;height:5%;margin-right:15%;"/>
-</div>
+}
 
 
 
@@ -124,7 +117,3 @@
 
     }
 </div>
-
-
-
-

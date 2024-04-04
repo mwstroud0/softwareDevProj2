@@ -28,12 +28,27 @@ namespace Group11_iCLOTHINGApp.Controllers
                 pRODUCT = pRODUCT.Where(p => p.departmentID == departmentID);
                 return View(pRODUCT.ToList());
             }
-            else //if (departmentID == null && categoryID != null)
+            else if (departmentID == null && categoryID != null)
             {
                 var pRODUCT = db.PRODUCT.AsQueryable();
                 pRODUCT = pRODUCT.Where(p => p.categoryID == categoryID);
                 return View(pRODUCT.ToList());
             }
+            else
+            {
+                var pRODUCT = db.PRODUCT.AsQueryable();
+                pRODUCT = pRODUCT.Where(p => p.categoryID == categoryID);
+                pRODUCT = pRODUCT.Where(p => p.departmentID == departmentID);
+                return View(pRODUCT.ToList());
+
+            }
+        }
+
+        public ActionResult Search(string search)
+        {
+            var pRODUCT = db.PRODUCT.AsQueryable();
+            pRODUCT = pRODUCT.Where(p => p.productDescription.Contains(search) || p.productName.Contains(search));
+            return View(pRODUCT.ToList());
         }
 
         // GET: customerBrowse/Details/5
