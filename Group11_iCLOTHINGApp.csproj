@@ -343,6 +343,7 @@
     <Content Include="Views\userQuery\Index.cshtml" />
     <Content Include="Views\loginRegister\Register.cshtml" />
     <Content Include="Views\loginRegister\Login.cshtml" />
+    <Content Include="Views\userQuery\SubmitNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
