@@ -17,6 +17,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_PASSWORD
         public ActionResult Index()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             var uSER_PASSWORD = db.USER_PASSWORD.Include(u => u.CUSTOMER);
             return View(uSER_PASSWORD.ToList());
         }
@@ -24,6 +28,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_PASSWORD/Details/5
         public ActionResult Details(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +47,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_PASSWORD/Create
         public ActionResult Create()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             ViewBag.userID = new SelectList(db.CUSTOMER, "customerID", "customerName");
             return View();
         }
@@ -50,6 +62,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "userID,userAccountName,userEncryptedPassword,passwordExpiryTime,userAccountExpiryDate")] USER_PASSWORD uSER_PASSWORD)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.USER_PASSWORD.Add(uSER_PASSWORD);
@@ -64,6 +80,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_PASSWORD/Edit/5
         public ActionResult Edit(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -84,6 +104,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "userID,userAccountName,userEncryptedPassword,passwordExpiryTime,userAccountExpiryDate")] USER_PASSWORD uSER_PASSWORD)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.Entry(uSER_PASSWORD).State = EntityState.Modified;
@@ -97,6 +121,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_PASSWORD/Delete/5
         public ActionResult Delete(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,6 +142,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             USER_PASSWORD uSER_PASSWORD = db.USER_PASSWORD.Find(id);
             db.USER_PASSWORD.Remove(uSER_PASSWORD);
             db.SaveChanges();

@@ -17,6 +17,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: SHOPPING_CART
         public ActionResult Index()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             var sHOPPING_CART = db.SHOPPING_CART.Include(s => s.CUSTOMER).Include(s => s.PRODUCT);
             return View(sHOPPING_CART.ToList());
         }
@@ -24,6 +28,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: SHOPPING_CART/Details/5
         public ActionResult Details(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +47,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: SHOPPING_CART/Create
         public ActionResult Create()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
             ViewBag.productID = new SelectList(db.PRODUCT, "productID", "brandID");
             return View();
@@ -51,6 +63,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "cartID,customerID,productID,cartProductPrice,cartProductQty")] SHOPPING_CART sHOPPING_CART)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.SHOPPING_CART.Add(sHOPPING_CART);
@@ -66,6 +82,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: SHOPPING_CART/Edit/5
         public ActionResult Edit(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -87,6 +107,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "cartID,customerID,productID,cartProductPrice,cartProductQty")] SHOPPING_CART sHOPPING_CART)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.Entry(sHOPPING_CART).State = EntityState.Modified;
@@ -101,6 +125,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: SHOPPING_CART/Delete/5
         public ActionResult Delete(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -118,10 +146,31 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             SHOPPING_CART sHOPPING_CART = db.SHOPPING_CART.Find(id);
             db.SHOPPING_CART.Remove(sHOPPING_CART);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+
+
+        public ActionResult CustomerCart()
+        {
+            int id = (int) Session["idUsSS"];
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            SHOPPING_CART sHOPPING_CART = db.SHOPPING_CART.Find(id);
+            if (sHOPPING_CART == null)
+            {
+                return HttpNotFound();
+            }
+            return View(sHOPPING_CART);
         }
 
         protected override void Dispose(bool disposing)

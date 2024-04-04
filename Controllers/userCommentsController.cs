@@ -17,6 +17,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_COMMENTS
         public ActionResult Index()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             var uSER_COMMENTS = db.USER_COMMENTS.Include(u => u.CUSTOMER);
             return View(uSER_COMMENTS.ToList());
         }
@@ -24,6 +28,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_COMMENTS/Details/5
         public ActionResult Details(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +47,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_COMMENTS/Create
         public ActionResult Create()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
             return View();
         }
@@ -50,6 +62,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "commentNo,customerID,commentDate,commentDescription")] USER_COMMENTS uSER_COMMENTS)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.USER_COMMENTS.Add(uSER_COMMENTS);
@@ -64,6 +80,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_COMMENTS/Edit/5
         public ActionResult Edit(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -84,6 +104,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "commentNo,customerID,commentDate,commentDescription")] USER_COMMENTS uSER_COMMENTS)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.Entry(uSER_COMMENTS).State = EntityState.Modified;
@@ -97,6 +121,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_COMMENTS/Delete/5
         public ActionResult Delete(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,6 +142,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             USER_COMMENTS uSER_COMMENTS = db.USER_COMMENTS.Find(id);
             db.USER_COMMENTS.Remove(uSER_COMMENTS);
             db.SaveChanges();

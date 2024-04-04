@@ -17,6 +17,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_QUERY
         public ActionResult Index()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             var uSER_QUERY = db.USER_QUERY.Include(u => u.CUSTOMER);
             return View(uSER_QUERY.ToList());
         }
@@ -24,6 +28,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_QUERY/Details/5
         public ActionResult Details(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -39,6 +47,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_QUERY/Create
         public ActionResult Create()
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
             return View();
         }
@@ -50,6 +62,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "queryNo,customerID,queryDate,queryDescription")] USER_QUERY uSER_QUERY)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.USER_QUERY.Add(uSER_QUERY);
@@ -64,6 +80,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_QUERY/Edit/5
         public ActionResult Edit(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -84,6 +104,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "queryNo,customerID,queryDate,queryDescription")] USER_QUERY uSER_QUERY)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (ModelState.IsValid)
             {
                 db.Entry(uSER_QUERY).State = EntityState.Modified;
@@ -97,6 +121,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         // GET: USER_QUERY/Delete/5
         public ActionResult Delete(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
@@ -114,6 +142,10 @@ namespace Group11_iCLOTHINGApp.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
+            if (Session["idUsSS"] == null || !Session["UsernameSS"].Equals("admin"))
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+            }
             USER_QUERY uSER_QUERY = db.USER_QUERY.Find(id);
             db.USER_QUERY.Remove(uSER_QUERY);
             db.SaveChanges();
