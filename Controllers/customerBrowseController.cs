@@ -15,10 +15,25 @@ namespace Group11_iCLOTHINGApp.Controllers
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
         // GET: customerBrowse
-        public ActionResult Index()
+        public ActionResult Index(int? departmentID, int? categoryID)
         {
-            var pRODUCT = db.PRODUCT.Include(p => p.ADMINISTRATOR).Include(p => p.BRAND).Include(p => p.CATEGORY).Include(p => p.DEPARTMENT);
-            return View(pRODUCT.ToList());
+            if (departmentID == null && categoryID == null)
+            {
+                var pRODUCT = db.PRODUCT.Include(p => p.ADMINISTRATOR).Include(p => p.BRAND).Include(p => p.CATEGORY).Include(p => p.DEPARTMENT);
+                return View(pRODUCT.ToList());
+            }
+            else if(departmentID != null && categoryID == null)
+            {
+                var pRODUCT = db.PRODUCT.AsQueryable();
+                pRODUCT = pRODUCT.Where(p => p.departmentID == departmentID);
+                return View(pRODUCT.ToList());
+            }
+            else //if (departmentID == null && categoryID != null)
+            {
+                var pRODUCT = db.PRODUCT.AsQueryable();
+                pRODUCT = pRODUCT.Where(p => p.categoryID == categoryID);
+                return View(pRODUCT.ToList());
+            }
         }
 
         // GET: customerBrowse/Details/5
