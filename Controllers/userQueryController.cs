@@ -25,9 +25,6 @@ namespace Group11_iCLOTHINGApp.Controllers
             }
             else
             {
- //               var uSER_QUERY = db.USER_QUERY.Include(u => u.CUSTOMER);
- //               return View(uSER_QUERY.ToList());
-
                 ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
                 return View();
             }
