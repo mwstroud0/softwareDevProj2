@@ -160,11 +160,13 @@ namespace Group11_iCLOTHINGApp.Controllers
 
         public ActionResult CustomerCart()
         {
-            int id = (int) Session["idUsSS"];
-            if (id == null)
+            if (Session["idUsSS"].ToString() == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
             }
+
+            int id = int.Parse(Session["idUsSS"].ToString());
+
             SHOPPING_CART sHOPPING_CART = db.SHOPPING_CART.Find(id);
             if (sHOPPING_CART == null)
             {
