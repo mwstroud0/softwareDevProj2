@@ -160,9 +160,9 @@ namespace Group11_iCLOTHINGApp.Controllers
 
         public ActionResult CustomerCart()
         {
-            if (Session["idUsSS"].ToString() == null)
+            if (Session["idUsSS"] == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.NotFound);
+                return RedirectToAction("Login", "loginRegister");
             }
 
             int id = int.Parse(Session["idUsSS"].ToString());
