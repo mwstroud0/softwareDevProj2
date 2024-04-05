@@ -47,7 +47,7 @@
                     @if (Session["UsernameSS"] != null)
                     {
                         <li>
-                            <a href="/shoppingCart/CustomerCart/">
+                            <a href="@Url.Action("CustomerCart", "customerBrowse")">
                                 <img alt="shopping cart" style="width:25px; margin:15px;"
                                      src="~/Content/img/cart.png" title="search" />
                             </a>

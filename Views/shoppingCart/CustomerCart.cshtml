@@ -1,4 +1,4 @@
-﻿@model IEnumerable<Group11_iCLOTHINGApp.Models.SHOPPING_CART>
+﻿@model IEnumerable<Group11_iCLOTHINGApp.Models.ITEM>
 
 @{
     ViewBag.Title = "CustomerCart";
@@ -9,19 +9,19 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.cartID)
+            @Html.DisplayNameFor(model => model.productName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cartProductPrice)
+            @Html.DisplayNameFor(model => model.itemQty)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.cartProductQty)
+            @Html.DisplayNameFor(model => model.brandID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.CUSTOMER.customerName)
+            @Html.DisplayNameFor(model => model.productDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.PRODUCT.brandID)
+            @Html.DisplayNameFor(model => model.productPrice)
         </th>
         <th></th>
     </tr>
@@ -30,24 +30,19 @@
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.cartID)
+                @Html.DisplayFor(modelItem => item.productName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cartProductPrice)
+                @Html.DisplayFor(modelItem => item.itemQty)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.cartProductQty)
+                @Html.DisplayFor(modelItem => item.brandID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.CUSTOMER.customerName)
+                @Html.DisplayFor(modelItem => item.productDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.PRODUCT.brandID)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.cartID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.cartID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.cartID })
+                @Html.DisplayFor(modelItem => item.productPrice)
             </td>
         </tr>
     }

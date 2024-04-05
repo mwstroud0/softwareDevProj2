@@ -14,6 +14,18 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        public ActionResult CustomerCart()
+        {
+            List<ITEM> itemList = (List<ITEM>)Session["cart"];
+
+            if(itemList == null)
+            {
+                itemList = new List<ITEM>();
+                Session["cart"] = itemList;
+            }
+            return View("~/Views/ShoppingCart/CustomerCart.cshtml", itemList);
+        }
+
         // GET: customerBrowse
         public ActionResult Index(int? departmentID, int? categoryID)
         {
@@ -169,14 +181,16 @@ namespace Group11_iCLOTHINGApp.Controllers
             {
                 return HttpNotFound();
             }
+
+            List<ITEM> itemList;
             // If the cart is empty, add a new item to the cart
             if (Session["cart"] == null)
             {
-                List<ITEM> itemList = new List<ITEM>(); 
+                itemList = new List<ITEM>(); 
 
                 ITEM newItem = new ITEM();
 
-                newItem.itemID = db.ITEM.Count() + 1;
+                newItem.itemID = pRODUCT.productID;
                 newItem.productName = pRODUCT.productName;
                 newItem.productID = pRODUCT.productID;
                 newItem.departmentID = pRODUCT.departmentID;
@@ -193,14 +207,33 @@ namespace Group11_iCLOTHINGApp.Controllers
             else
             {
                 // Search cart for the same itemID
-                List<ITEM> itemList = (List<ITEM>)Session["cart"];
+                itemList = (List<ITEM>)Session["cart"];
+                foreach(ITEM item in itemList)
+                {
+                    if(item.productID == pRODUCT.productID)
+                    {
+                        item.itemQty++;
+                        Session["cart"] = itemList;
+                        return RedirectToAction("Index");
+                    }
+                }
+
+                //add new item to the cart
+                ITEM newItem = new ITEM();
+                newItem.itemID = pRODUCT.productID;
+                newItem.productName = pRODUCT.productName;
+                newItem.productID = pRODUCT.productID;
+                newItem.departmentID = pRODUCT.departmentID;
+                newItem.adminID = pRODUCT.adminID;
+                newItem.categoryID = pRODUCT.categoryID;
+                newItem.brandID = pRODUCT.brandID;
+                newItem.productDescription = pRODUCT.productDescription;
+                newItem.productPrice = pRODUCT.productPrice;
+                newItem.productQty = pRODUCT.productQty;
+                newItem.itemQty = 1; // Just added 1 to the count
+
+                itemList.Add(newItem);
             }
-            
-
-            // First see if the itemID is already in the list
-
-
-            
 
             Session["cart"] = itemList;
 
