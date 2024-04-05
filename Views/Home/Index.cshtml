@@ -7,8 +7,48 @@
         <div class="hero-text">
             <h1 id="title">iCLOTHING</h1>
             <p class="lead">Your style. Your way.</p>
-            <p>@Session["idUsSS"]</p>
         </div>
+        @if (Session["UsernameSS"] == null || !Session["UsernameSS"].Equals("admin"))
+        {
+            <div class="menu-container">
+                <a href="/aboutUs" class="menu-link">
+                    <div class="menu-card card1">
+                        <p class="menu-text">Browse Products</p>
+                    </div>
+                </a>
+                <a href="/aboutUs" class="menu-link">
+                    <div class="menu-card card2">
+                        <p class="menu-text">About</p>
+                    </div>
+                </a>
+                <a href="/userQuery/SubmitNew" class="menu-link">
+                    <div class="menu-card card3">
+                        <p class="menu-text">Contact Us</p>
+                    </div>
+                </a>
+                <a href="/userQuery/SubmitNew" class="menu-link">
+                    <div class="menu-card card4">
+                        <p class="menu-text">Comments</p>
+                    </div>
+                </a>
+            </div>
+        }
+        else
+        {
+            <div class="menu-container admin-menu">
+                <div class="admin-menu-link">@Html.ActionLink("Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Admins", "Index", "administrators", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Customer Info", "Index", "customers", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Departments", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Brands", "Index", "brands", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Categories", "Index", "categories", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("ShoppingCarts", "Index", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Passwords", "Index", "userPassword", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Comments", "Index", "userComments", new { area = "" }, new { @class = "nav-link" })</div>
+            </div>
+        }
     </section>
-    <p style="font-size:10px;">Image courtesy of Gaetano Cessati - Unsplash</p>
+    <p style="font-size:10px;">Images courtesy of Gaetano Cessati, Parker Burchfield, Harprit Bola Aaron Burden, and Volodymyr Hrysh - Unsplash</p>
 </main>
