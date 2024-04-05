@@ -162,6 +162,30 @@ namespace Group11_iCLOTHINGApp.Controllers
             return RedirectToAction("Index");
         }
 
+        [HttpPost, ActionName("AddToCart")]
+        public ActionResult AddToCart(int? id)
+        {
+            if (id == null)
+            {
+                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+            }
+            PRODUCT pRODUCT = db.PRODUCT.Find(id);
+            if (pRODUCT == null)
+            {
+                return HttpNotFound();
+            }
+            if (Session["cart"] == null)
+            {
+                Session["cart"] = new List<PRODUCT>(); 
+            }
+            List<PRODUCT> productList = (List<PRODUCT>) Session["cart"];
+
+            productList.Add(pRODUCT);
+
+            Session["cart"] = productList;
+
+            return RedirectToAction("Index");
+        }
         protected override void Dispose(bool disposing)
         {
             if (disposing)

@@ -149,6 +149,7 @@
     <Compile Include="Controllers\administratorsController.cs" />
     <Compile Include="Controllers\brandsController.cs" />
     <Compile Include="Controllers\categoriesController.cs" />
+    <Compile Include="Controllers\customerBrowseController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\departmentsController.cs" />
     <Compile Include="Controllers\loginRegisterController.cs" />
@@ -344,6 +345,12 @@
     <Content Include="Views\loginRegister\Register.cshtml" />
     <Content Include="Views\loginRegister\Login.cshtml" />
     <Content Include="Views\shoppingCart\CustomerCart.cshtml" />
+    <Content Include="Views\customerBrowse\Create.cshtml" />
+    <Content Include="Views\customerBrowse\Delete.cshtml" />
+    <Content Include="Views\customerBrowse\Details.cshtml" />
+    <Content Include="Views\customerBrowse\Edit.cshtml" />
+    <Content Include="Views\customerBrowse\Index.cshtml" />
+    <Content Include="Views\customerBrowse\Search.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

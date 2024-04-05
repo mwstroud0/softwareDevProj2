@@ -28,8 +28,14 @@ namespace Group11_iCLOTHINGApp.Models
         public int departmentID { get; set; }
         public string productName { get; set; }
         public string productDescription { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "Price")]
         public double productPrice { get; set; }
+
+        [System.ComponentModel.DataAnnotations.Display(Name = "Quantity")]
         public int productQty { get; set; }
+
+        public int purchaseAmt { get; set; }
     
         public virtual ADMINISTRATOR ADMINISTRATOR { get; set; }
         public virtual BRAND BRAND { get; set; }
