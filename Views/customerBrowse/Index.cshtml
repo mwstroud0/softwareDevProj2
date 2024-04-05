@@ -102,7 +102,10 @@
             <div>
                 <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
                 <div style="padding:10%;padding-left:15%;">
-                    <button style="margin-right: 5%;">Add to cart</button>
+                    @if (Session["UsernameSS"] != null)
+                    {
+                        <button style="margin-right: 5%;">Add to cart</button>
+                    }
                     @Html.ActionLink("Details", "Details", new { id = item.productID })
                 </div>
             </div>
