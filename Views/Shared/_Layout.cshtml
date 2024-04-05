@@ -40,7 +40,6 @@
                         <li>@Html.ActionLink("About", "LearnAboutUs", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Contact", "SubmitNew", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Comment", "SubmitNew", "userComments", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("MyCart", "CustomerCart", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</li>
                     }
                 </ul>
 
@@ -48,7 +47,7 @@
                     @if (Session["UsernameSS"] != null)
                     {
                         <li>
-                            <a href="/CustomerCart">
+                            <a href="/shoppingCart/CustomerCart/">
                                 <img alt="shopping cart" style="width:25px; margin:15px;"
                                      src="~/Content/img/cart.png" title="search" />
                             </a>

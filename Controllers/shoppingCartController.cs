@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -156,8 +157,6 @@ namespace Group11_iCLOTHINGApp.Controllers
             return RedirectToAction("Index");
         }
 
-
-
         public ActionResult CustomerCart()
         {
             if (Session["idUsSS"] == null)
@@ -167,12 +166,8 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             int id = int.Parse(Session["idUsSS"].ToString());
 
-            SHOPPING_CART sHOPPING_CART = db.SHOPPING_CART.Find(id);
-            if (sHOPPING_CART == null)
-            {
-                return HttpNotFound();
-            }
-            return View(sHOPPING_CART);
+            var sHOPPING_CART = db.SHOPPING_CART.Include(s => s.CUSTOMER).Include(s => s.PRODUCT).Where(s => s.customerID.Equals(id));
+            return View(sHOPPING_CART.ToList());
         }
 
         protected override void Dispose(bool disposing)
