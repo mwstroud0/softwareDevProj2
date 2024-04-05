@@ -14,6 +14,44 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        // Method accessed by Customer to submit a comment
+        public ActionResult SubmitNew()
+        {
+            // if user is not signed in, prompt them to
+            if (Session["idUsSS"] == null)
+            {
+                // send user to sign in
+                return RedirectToAction("Login", "loginRegister");
+            }
+            else
+            {
+                ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public ActionResult SubmitNew(USER_COMMENTS uSER_COMMENT)
+        {
+            uSER_COMMENT.commentDate = DateTime.Now;
+
+            //TODO: get the customerID
+            uSER_COMMENT.customerID = int.Parse(Session["idUsSS"].ToString());
+
+            //get query number
+            uSER_COMMENT.commentNo = db.USER_COMMENTS.Max(q => q.commentNo) + 1;
+
+            if (ModelState.IsValid)
+            {
+                db.USER_COMMENTS.Add(uSER_COMMENT);
+                db.SaveChanges();
+                return RedirectToAction("Index", "home");
+            }
+
+            ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName", uSER_COMMENT.customerID);
+            return View(uSER_COMMENT);
+        }
+
         // GET: USER_COMMENTS
         public ActionResult Index()
         {
