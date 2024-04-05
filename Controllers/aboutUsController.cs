@@ -14,6 +14,17 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        // method accessed by the customer to learn about iClothing
+        public ActionResult LearnAboutUs()
+        {
+            ABOUT_US aBOUT_US = db.ABOUT_US.Find(1);
+            if (aBOUT_US == null)
+            {
+                return HttpNotFound();
+            }
+            return View(aBOUT_US);
+        }
+
         // GET: ABOUT_US
         public ActionResult Index()
         {

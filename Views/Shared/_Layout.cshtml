@@ -24,7 +24,7 @@
                     {
                         <li>@Html.ActionLink("Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Queries", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Admins", "Index", "administrators", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Customer Info", "Index", "customers", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Departments", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</li>
@@ -37,8 +37,10 @@
                     else
                     {
                         <li>@Html.ActionLink("Browse Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("About", "LearnAboutUs", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Contact", "SubmitNew", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Comment", "SubmitNew", "userComments", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("MyCart", "CustomerCart", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</li>
                     }
                 </ul>
 

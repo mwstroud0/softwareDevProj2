@@ -14,6 +14,45 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        // method accessed by a customer to submit a new query
+        public ActionResult SubmitNew()
+        {
+            // if user is not signed in, prompt them to
+            if (Session["idUsSS"] == null)
+            {
+                // send user to sign in
+                return RedirectToAction("Login", "loginRegister");
+            }
+            else
+            {
+                ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName");
+                return View();
+            }
+        }
+
+        [HttpPost]
+        public ActionResult SubmitNew(USER_QUERY uSER_QUERY)
+        {
+            uSER_QUERY.queryDate = DateTime.Now;
+
+            //TODO: get the customerID
+            uSER_QUERY.customerID = int.Parse(Session["idUsSS"].ToString());
+
+            //get query number
+            uSER_QUERY.queryNo = db.USER_QUERY.Max(q => q.queryNo) + 1;
+
+            if (ModelState.IsValid)
+            {
+                db.USER_QUERY.Add(uSER_QUERY);
+                db.SaveChanges();
+                return RedirectToAction("Index", "home");
+            }
+
+            ViewBag.customerID = new SelectList(db.CUSTOMER, "customerID", "customerName", uSER_QUERY.customerID);
+            return View(uSER_QUERY);
+        }
+
+
         // GET: USER_QUERY
         public ActionResult Index()
         {
