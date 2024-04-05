@@ -44,7 +44,24 @@ namespace Group11_iCLOTHINGApp.Controllers
             if (ModelState.IsValid)
             {
                 db.USER_COMMENTS.Add(uSER_COMMENT);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException e)
+                {
+                    Exception raise = e;
+                    foreach (var validationErrs in e.EntityValidationErrors)
+                    {
+                        foreach (var validationErr in validationErrs.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
+                                validationErr.ErrorMessage, uSER_COMMENT.customerID, uSER_COMMENT.commentNo);
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
                 return RedirectToAction("Index", "home");
             }
 
