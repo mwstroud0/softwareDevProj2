@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Diagnostics;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -14,6 +15,44 @@ namespace Group11_iCLOTHINGApp.Controllers
     public class shoppingCartController : Controller
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
+
+        // call this method after modifying the cart to update/store the current shopping cart
+        public ActionResult UpdateCart()
+        {
+            // currently, cart is stored only in Session["cart"]
+            // need to store the cart in the database
+
+            List<ITEM> itemsList = (List<ITEM>)Session["cart"];
+
+            if(itemsList == null || itemsList.Count == 0)
+            {
+                //session cart is empty, do nothing
+                return RedirectToAction("Index", "customerBrowse");
+            }
+
+            // add or overwrite the customers cart to the database
+            int custID = int.Parse(Session["idUsSS"].ToString());
+            var currentCart = db.SHOPPING_CART.Where(cart => cart.customerID == custID).ToList();
+            foreach (SHOPPING_CART cart in currentCart)
+            {
+                db.SHOPPING_CART.Remove(cart);
+            }
+            db.SaveChanges();
+
+            foreach (ITEM item in itemsList)
+            {
+                SHOPPING_CART cART = new SHOPPING_CART();
+                cART.cartID = db.SHOPPING_CART.Count() + 1;
+                cART.customerID = int.Parse(Session["idUsSS"].ToString());
+                cART.productID = item.productID;
+                cART.cartProductPrice = (int)item.productPrice;
+                cART.cartProductQty = item.itemQty;
+                db.SHOPPING_CART.Add(cART);
+            }
+            db.SaveChanges();
+
+            return RedirectToAction("Index", "customerBrowse");
+        }
 
         // GET: SHOPPING_CART
         public ActionResult Index()

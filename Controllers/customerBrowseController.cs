@@ -214,7 +214,7 @@ namespace Group11_iCLOTHINGApp.Controllers
                     {
                         item.itemQty++;
                         Session["cart"] = itemList;
-                        return RedirectToAction("Index");
+                        return RedirectToAction("UpdateCart", "shoppingCart");
                     }
                 }
 
@@ -237,7 +237,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             Session["cart"] = itemList;
 
-            return RedirectToAction("Index");
+            return RedirectToAction("UpdateCart", "shoppingCart");
         }
 
         protected override void Dispose(bool disposing)
