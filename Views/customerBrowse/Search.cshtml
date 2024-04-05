@@ -37,16 +37,16 @@
         <ul class="navbar-nav">
             <li style="margin-right:10%;"><h3 style="color:darkgray;">Mens:</h3></li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 1})">Shoes</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 9})">Shoes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 2})">Shirts</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 11})">Shirts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 3})">Pants</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 10})">Pants</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 4})">Accessories</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 12})">Accessories</a>
             </li>
         </ul>
     </nav>
@@ -57,16 +57,16 @@
         <ul class="navbar-nav">
             <li style="margin-right:10%;"><h3 style="color:darkgray;">Womens:</h3></li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 1})">Shoes</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 5})">Shoes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 2})">Shirts</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 7})">Shirts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 3})">Pants</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 6})">Pants</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 4})">Accessories</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 8})">Accessories</a>
             </li>
         </ul>
     </nav>
@@ -80,10 +80,10 @@
                 <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 1})">Shoes</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 2})">Shirts</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 3})">Shirts</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 3})">Pants</a>
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 2})">Pants</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 4})">Accessories</a>
@@ -102,7 +102,10 @@
             <div>
                 <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
                 <div style="padding:10%;padding-left:15%;">
-                    <button style="margin-right: 5%;">Add to cart</button>
+                    @if (Session["UsernameSS"] != null)
+                    {
+                        <button style="margin-right: 5%;">Add to cart</button>
+                    }
                     @Html.ActionLink("Details", "Details", new { id = item.productID })
                 </div>
             </div>

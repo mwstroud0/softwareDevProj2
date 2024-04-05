@@ -30,24 +30,8 @@
             @Html.DisplayNameFor(model => model.productPrice)
         </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.productPrice)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.productQty)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.productQty)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.ADMINISTRATOR.adminName)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.ADMINISTRATOR.adminName)
+        <dd style="display:flex;">
+            <p>$</p>@Html.DisplayFor(model => model.productPrice)
         </dd>
 
         <dt>
@@ -77,6 +61,5 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.productID }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
