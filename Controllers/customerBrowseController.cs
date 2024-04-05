@@ -202,7 +202,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             
 
-            Session["cart"] = itemList;
+            Session["cart"] = 1;
 
             return RedirectToAction("Index");
         }
