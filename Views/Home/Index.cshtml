@@ -9,7 +9,7 @@
             <p class="lead">Your style. Your way.</p>
         </div>
         @if (Session["UsernameSS"] == null || !Session["UsernameSS"].Equals("admin"))
-         {
+        {
             <div class="menu-container">
                 <a href="/aboutUs" class="menu-link">
                     <div class="menu-card card1">
@@ -27,7 +27,23 @@
                     </div>
                 </a>
             </div>
-         }
-        </section>
+        }
+        else
+        {
+            <div class="menu-container admin-menu">
+                <div class="admin-menu-link">@Html.ActionLink("Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Admins", "Index", "administrators", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Customer Info", "Index", "customers", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Departments", "Index", "departments", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Brands", "Index", "brands", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Categories", "Index", "categories", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("ShoppingCarts", "Index", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Passwords", "Index", "userPassword", new { area = "" }, new { @class = "nav-link" })</div>
+                <div class="admin-menu-link">@Html.ActionLink("Comments", "Index", "userComments", new { area = "" }, new { @class = "nav-link" })</div>
+            </div>
+        }
+    </section>
     <p style="font-size:10px;">Images courtesy of Gaetano Cessati, Parker Burchfield, Harprit Bola, and Volodymyr Hrysh - Unsplash</p>
 </main>

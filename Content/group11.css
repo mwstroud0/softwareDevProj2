@@ -5,8 +5,10 @@
     2024
 */
 
-.hero-container{
-
+.group11-nav {
+    width: 700px;
+    justify-content: left !important;
+    flex-wrap:wrap;
 }
 
 .hero {
@@ -16,7 +18,7 @@
 }
 
 .hero-text {
-    color: white;
+    color: wheat;
     margin: 200px auto;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.5);
@@ -39,6 +41,19 @@ footer {
 .btn-submit-blue {
     background: rgb(22, 80, 172);
     color: white;
+}
+
+.admin-menu {
+    color: white;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.admin-menu-link {
+    height: 70px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 9px;
 }
 
 .menu-img {
@@ -92,7 +107,7 @@ footer {
 .menu-text {
     text-align: center;
     width: 240px;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     margin: auto;
-    border-radius: 4px;
+    border-radius: 7px;
 }
