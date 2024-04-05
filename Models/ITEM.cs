@@ -13,10 +13,10 @@ namespace Group11_iCLOTHINGApp.Models
     using System.Collections.Generic;
     using System.ComponentModel.DataAnnotations.Schema;
 
-    public partial class PRODUCT
+    public partial class ITEM
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public PRODUCT()
+        public ITEM()
         {
             this.ITEM_DELIVERY = new HashSet<ITEM_DELIVERY>();
             this.SHOPPING_CART = new HashSet<SHOPPING_CART>();
@@ -36,8 +36,8 @@ namespace Group11_iCLOTHINGApp.Models
         [System.ComponentModel.DataAnnotations.Display(Name = "Inventory")]
         public int productQty { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Display(Name = "Purchase Quantity")]
-        public int purchaseAmt { get; set; }
+        [System.ComponentModel.DataAnnotations.Display(Name = "Item Quantity")]
+        public int itemQty { get; set; }
     
         public virtual ADMINISTRATOR ADMINISTRATOR { get; set; }
         public virtual BRAND BRAND { get; set; }

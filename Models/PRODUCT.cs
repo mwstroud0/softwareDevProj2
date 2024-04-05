@@ -35,9 +35,6 @@ namespace Group11_iCLOTHINGApp.Models
 
         [System.ComponentModel.DataAnnotations.Display(Name = "Inventory")]
         public int productQty { get; set; }
-
-        [System.ComponentModel.DataAnnotations.Display(Name = "Purchase Quantity")]
-        public int purchaseAmt { get; set; }
     
         public virtual ADMINISTRATOR ADMINISTRATOR { get; set; }
         public virtual BRAND BRAND { get; set; }
