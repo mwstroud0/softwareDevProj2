@@ -171,7 +171,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             }
             if (Session["cart"] == null)
             {
-                Session["cart"] = new List<PRODUCT>(); 
+                Session["cart"] = new List<ITEM>(); 
             }
             List<PRODUCT> productList = (List<PRODUCT>) Session["cart"];
 
@@ -181,6 +181,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             return RedirectToAction("Index");
         }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
