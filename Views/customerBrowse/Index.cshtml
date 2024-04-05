@@ -1,0 +1,131 @@
+﻿@model IEnumerable<Group11_iCLOTHINGApp.Models.PRODUCT>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<div style="display:inline-flex;width:100%;">
+    <img src="~/Content/img/logo.png" style="width:10%;height:5%;margin-left:15%" />
+    <div style="width:50%;">
+        <h2 style="text-align:center;font-family:cursive;margin-top:2%;margin-bottom:2%;">Customer Browse Page</h2>
+
+        @using (Html.BeginForm("Search", "customerBrowse", FormMethod.Get))
+        {
+            <div style="display:flex; width:50%;justify-content:center; margin-left:25%;">
+                <div class="form-control bg-black">
+                    @Html.TextBox("Search", null, new { placeholder = "Search for a product..." })
+                    <button type="submit" class="btn btn-danger btn-sm">Search</button>
+                </div>
+            </div>
+        }
+    </div>
+    <img src="~/Content/img/logo.png" style="width:10%;height:5%;margin-right:15%;" />
+</div>
+
+
+
+<div style="display:flex; margin-top: 5%;">
+    <div style="margin-left:20%;margin-right:10%;"><button class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#mens">Mens</button></div>
+    <div style="margin-left:10%;margin-right:10%;"><button class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#womens">Womens</button></div>
+    <div style="margin-left:10%;margin-right:20%;"><button class="btn btn-outline-secondary btn-lg" data-bs-toggle="collapse" data-bs-target="#kids">Kids</button></div>
+</div>
+
+
+<div id="mens" class="collapse" style="margin-top:2%;">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center" style="margin-top:2%;">
+        <ul class="navbar-nav">
+            <li style="margin-right:10%;"><h3 style="color:darkgray;">Mens:</h3></li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 1})">Shoes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 2})">Shirts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 3})">Pants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 3, categoryID = 4})">Accessories</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div id="womens" class="collapse" style="margin-top:2%;">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li style="margin-right:10%;"><h3 style="color:darkgray;">Womens:</h3></li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 1})">Shoes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 2})">Shirts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 3})">Pants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 2, categoryID = 4})">Accessories</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<div id="kids" class="collapse" style="margin-top:2%;">
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center">
+        <ul class="navbar-nav">
+            <li style="margin-right:10%;"><h3 style="color:darkgray;">Kids:</h3></li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 1})">Shoes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 2})">Shirts</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 3})">Pants</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="@Url.Action("Index", "customerBrowse", new {departmentID = 1, categoryID = 4})">Accessories</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+
+
+<div style="display: flex; width: 99.99%; padding-top: 3%; flex-wrap: wrap;">
+    @foreach (var item in Model)
+    {
+
+        <div style="width:33.33%;display:flex; outline: 2px dotted black;">
+            <div>
+                <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
+                <div style="padding:10%;padding-left:15%;">
+                    <button style="margin-right: 5%;">Add to cart</button>
+                    @Html.ActionLink("Details", "Details", new { id = item.productID })
+                </div>
+            </div>
+            <div style="margin-top: 10%; font-size:medium; padding-left:4%;font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif">
+                <div style="display:flex;">
+                    <p style="font-weight:bold;">Name:</p>
+                    <p style="padding-left: 2%;">@Html.DisplayFor(modelItem => item.productName)</p>
+                </div>
+                <div style="display: flex;">
+                    <p style="font-weight:bold;">Desc:</p>
+                    <p style="padding-left: 2%;">@Html.DisplayFor(modelItem => item.productDescription)</p>
+                </div>
+                <div style="display:flex;">
+                    <p style="font-weight:bold;">Price:</p>
+                    <p style="padding-left: 2%;">$@Html.DisplayFor(modelItem => item.productPrice)</p>
+                </div>
+            </div>
+        </div>
+
+    }
+</div>
+
+
+
+
+
