@@ -108,7 +108,15 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             if (checkLogin) 
             {
-                Session["idUsSS"] = uSER_PASSWORD.userID.ToString();
+                var selectIdString = "SELECT userID " +
+                                        "FROM USER_PASSWORD " +
+                                        "WHERE userAccountName = @Username";
+
+                int id = db.Database
+                    .SqlQuery<int>(selectIdString, new SqlParameter("@Username", enteredUsername))
+                    .FirstOrDefault();
+
+                Session["idUsSS"] = id;
                 Session["UsernameSS"] = uSER_PASSWORD.userAccountName.ToString();
                 return RedirectToAction("Index", "Home");
             } else
