@@ -3,32 +3,16 @@
   "WorkspaceRootPath": "C:\\proj\\softwareDevProj2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\shoppingcart\\customercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\shoppingcart\\customercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\customerbrowse\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\customerbrowse\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\controllers\\customerbrowsecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\customerbrowsecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\user_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\user_password.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\customer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\brand.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -51,92 +35,40 @@
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "USER_PASSWORD.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\USER_PASSWORD.cs",
-              "RelativeDocumentMoniker": "Models\\USER_PASSWORD.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\USER_PASSWORD.cs",
-              "RelativeToolTip": "Models\\USER_PASSWORD.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAABkAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T06:40:59.744Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "BRAND.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\BRAND.cs",
-              "RelativeDocumentMoniker": "Models\\BRAND.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\BRAND.cs",
-              "RelativeToolTip": "Models\\BRAND.cs",
-              "ViewState": "AQIAABEAAAAAAAAAAAAQwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T06:40:42.84Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "DEPARTMENT.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\DEPARTMENT.cs",
-              "RelativeDocumentMoniker": "Models\\DEPARTMENT.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\DEPARTMENT.cs",
-              "RelativeToolTip": "Models\\DEPARTMENT.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T06:40:34.329Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "CUSTOMER.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\CUSTOMER.cs",
-              "RelativeDocumentMoniker": "Models\\CUSTOMER.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\CUSTOMER.cs",
-              "RelativeToolTip": "Models\\CUSTOMER.cs",
-              "ViewState": "AQIAAB4AAAAAAAAAAAA4wAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T06:40:32.217Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "PRODUCT.cs",
               "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Models\\PRODUCT.cs",
               "RelativeDocumentMoniker": "Models\\PRODUCT.cs",
               "ToolTip": "C:\\proj\\softwareDevProj2\\Models\\PRODUCT.cs",
               "RelativeToolTip": "Models\\PRODUCT.cs",
-              "ViewState": "AQIAABoAAAAAAAAAAAAIwCUAAAAsAAAA",
+              "ViewState": "AQIAABsAAAAAAAAAAAAIwCUAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-05T06:40:26.193Z",
+              "WhenOpened": "2024-04-05T12:22:39.5Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CustomerCart.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\CustomerCart.cshtml",
-              "RelativeDocumentMoniker": "Views\\shoppingCart\\CustomerCart.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\CustomerCart.cshtml",
-              "RelativeToolTip": "Views\\shoppingCart\\CustomerCart.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAIAAAA",
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\customerBrowse\\Index.cshtml",
+              "RelativeDocumentMoniker": "Views\\customerBrowse\\Index.cshtml",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\customerBrowse\\Index.cshtml",
+              "RelativeToolTip": "Views\\customerBrowse\\Index.cshtml",
+              "ViewState": "AQIAAG8AAAAAAAAAAAAAAIIAAAA/AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T05:26:52.56Z",
+              "WhenOpened": "2024-04-05T07:05:15.599Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABwAAAAmAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-05T06:28:11.713Z",
+              "DocumentIndex": 1,
+              "Title": "customerBrowseController.cs",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Controllers\\customerBrowseController.cs",
+              "RelativeDocumentMoniker": "Controllers\\customerBrowseController.cs",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Controllers\\customerBrowseController.cs",
+              "RelativeToolTip": "Controllers\\customerBrowseController.cs",
+              "ViewState": "AQIAAJwAAAAAAAAAAAAWwKMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-05T07:04:33.727Z",
               "EditorCaption": ""
             }
           ]

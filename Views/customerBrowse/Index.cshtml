@@ -127,6 +127,15 @@
 
     }
 </div>
+<div>
+    @foreach (var item in @Session["cart"].ToString().ToList())
+            {
+                <div>
+                    @item
+                </div>
+            }
+        
+</div>
 
 
 

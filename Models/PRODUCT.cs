@@ -11,7 +11,8 @@ namespace Group11_iCLOTHINGApp.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations.Schema;
+
     public partial class PRODUCT
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
@@ -32,9 +33,10 @@ namespace Group11_iCLOTHINGApp.Models
         [System.ComponentModel.DataAnnotations.Display(Name = "Price")]
         public double productPrice { get; set; }
 
-        [System.ComponentModel.DataAnnotations.Display(Name = "Quantity")]
+        [System.ComponentModel.DataAnnotations.Display(Name = "Inventory")]
         public int productQty { get; set; }
 
+        [System.ComponentModel.DataAnnotations.Display(Name = "Purchase Quantity")]
         public int purchaseAmt { get; set; }
     
         public virtual ADMINISTRATOR ADMINISTRATOR { get; set; }

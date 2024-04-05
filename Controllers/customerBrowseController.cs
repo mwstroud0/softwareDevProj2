@@ -162,13 +162,8 @@ namespace Group11_iCLOTHINGApp.Controllers
             return RedirectToAction("Index");
         }
 
-        [HttpPost, ActionName("AddToCart")]
         public ActionResult AddToCart(int? id)
         {
-            if (id == null)
-            {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
-            }
             PRODUCT pRODUCT = db.PRODUCT.Find(id);
             if (pRODUCT == null)
             {
