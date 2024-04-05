@@ -33,7 +33,7 @@ namespace Group11_iCLOTHINGApp.Controllers
         [HttpPost]
         public ActionResult SubmitNew(USER_QUERY uSER_QUERY)
         {
-            uSER_QUERY.queryDate = DateTime.Now.Date;
+            uSER_QUERY.queryDate = DateTime.Now;
 
             //TODO: get the customerID
             uSER_QUERY.customerID = int.Parse(Session["idUsSS"].ToString());
