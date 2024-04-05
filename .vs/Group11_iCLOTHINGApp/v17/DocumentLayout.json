@@ -7,7 +7,7 @@
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:content\\group11.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
@@ -23,16 +23,8 @@
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:models\\shopping_cart.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|c:\\proj\\softwaredevproj2\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\shoppingcartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\views\\shoppingcart\\customercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:views\\shoppingcart\\customercart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|C:\\proj\\softwareDevProj2\\controllers\\loginregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{E20E7AF7-5AC8-4D96-8E91-430762FEB8DB}|Group11_iCLOTHINGApp.csproj|solutionrelative:controllers\\loginregistercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -42,19 +34,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "loginRegisterController.cs",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Controllers\\loginRegisterController.cs",
-              "RelativeDocumentMoniker": "Controllers\\loginRegisterController.cs",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Controllers\\loginRegisterController.cs",
-              "RelativeToolTip": "Controllers\\loginRegisterController.cs",
-              "ViewState": "AQIAADwAAAAAAAAAAAAAAHAAAAA1AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-04-04T00:55:32.412Z",
+              "DocumentIndex": 0,
+              "Title": "group11.css",
+              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
+              "RelativeDocumentMoniker": "Content\\group11.css",
+              "ToolTip": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
+              "RelativeToolTip": "Content\\group11.css",
+              "ViewState": "AQIAAAEAAAAAAAAAAAAUwCUAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-04-05T01:56:14.648Z",
               "EditorCaption": ""
             },
             {
@@ -111,19 +103,6 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "group11.css",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
-              "RelativeDocumentMoniker": "Content\\group11.css",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Content\\group11.css",
-              "RelativeToolTip": "Content\\group11.css",
-              "ViewState": "AQIAAA8AAAAAAAAAAAAUwDcAAAAXAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2024-04-05T01:56:14.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Index.cshtml",
               "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\Home\\Index.cshtml",
@@ -133,19 +112,6 @@
               "ViewState": "AQIAAA8AAAAAAAAAAAAAACAAAAAqAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-04-05T00:34:51.618Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "CustomerCart.cshtml",
-              "DocumentMoniker": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\CustomerCart.cshtml",
-              "RelativeDocumentMoniker": "Views\\shoppingCart\\CustomerCart.cshtml",
-              "ToolTip": "C:\\proj\\softwareDevProj2\\Views\\shoppingCart\\CustomerCart.cshtml",
-              "RelativeToolTip": "Views\\shoppingCart\\CustomerCart.cshtml",
-              "ViewState": "AQIAABgAAAAAAAAAAAAAAAYAAAAMAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-04-04T03:21:25.852Z",
               "EditorCaption": ""
             }
           ]
