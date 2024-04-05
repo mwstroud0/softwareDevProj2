@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.ITEM_DELIVERY" Width="1.5" PointX="5.25" PointY="12" IsExpanded="true" />
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.ORDER_STATUS" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.PRODUCT" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
-		  <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.ITEM" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+		<EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.ITEM" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.SHOPPING_CART" Width="1.5" PointX="8.25" PointY="11.75" IsExpanded="true" />
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.USER_COMMENTS" Width="1.5" PointX="8.25" PointY="16" IsExpanded="true" />
         <EntityTypeShape EntityType="Group11_iCLOTHINGDBModel.USER_PASSWORD" Width="1.5" PointX="3.75" PointY="17.25" IsExpanded="true" />

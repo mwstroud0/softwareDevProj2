@@ -22,6 +22,7 @@ namespace Group11_iCLOTHINGApp.Models
             this.SHOPPING_CART = new HashSet<SHOPPING_CART>();
         }
     
+        public int itemID { get; set; }
         public int productID { get; set; }
         public int brandID { get; set; }
         public int categoryID { get; set; }

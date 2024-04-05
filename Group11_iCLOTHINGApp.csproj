@@ -198,6 +198,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>iCLOTHINGModels.edmx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ITEM.cs" />
     <Compile Include="Models\ITEM_DELIVERY.cs">
       <DependentUpon>iCLOTHINGModels.tt</DependentUpon>
     </Compile>

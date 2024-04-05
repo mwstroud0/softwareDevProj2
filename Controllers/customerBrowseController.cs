@@ -169,15 +169,40 @@ namespace Group11_iCLOTHINGApp.Controllers
             {
                 return HttpNotFound();
             }
+            // If the cart is empty, add a new item to the cart
             if (Session["cart"] == null)
             {
-                Session["cart"] = new List<ITEM>(); 
+                List<ITEM> itemList = new List<ITEM>(); 
+
+                ITEM newItem = new ITEM();
+
+                newItem.itemID = db.ITEM.Count() + 1;
+                newItem.productName = pRODUCT.productName;
+                newItem.productID = pRODUCT.productID;
+                newItem.departmentID = pRODUCT.departmentID;
+                newItem.adminID = pRODUCT.adminID;
+                newItem.categoryID = pRODUCT.categoryID;
+                newItem.brandID = pRODUCT.brandID;
+                newItem.productDescription = pRODUCT.productDescription;
+                newItem.productPrice = pRODUCT.productPrice;
+                newItem.productQty = pRODUCT.productQty;
+                newItem.itemQty = 1; // Just added 1 to the count
+
+                itemList.Add(newItem);
             }
-            List<PRODUCT> productList = (List<PRODUCT>) Session["cart"];
+            else
+            {
+                // Search cart for the same itemID
+                List<ITEM> itemList = (List<ITEM>)Session["cart"];
+            }
+            
 
-            productList.Add(pRODUCT);
+            // First see if the itemID is already in the list
 
-            Session["cart"] = productList;
+
+            
+
+            Session["cart"] = itemList;
 
             return RedirectToAction("Index");
         }
