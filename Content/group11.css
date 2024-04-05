@@ -12,13 +12,16 @@
 .hero {
     background-image: url("/Content/img/gaetano-cessati-LOZKj-x6gDo-unsplash.jpg");
     background-size: cover;
-    height: 600px;
+    height: 800px;
 }
 
 .hero-text {
     color: white;
-    margin:auto;
+    margin: 200px auto;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 500px;
+    border-radius: 9px;
 }
 
 .hero-text h1{
@@ -36,4 +39,60 @@ footer {
 .btn-submit-blue {
     background: rgb(22, 80, 172);
     color: white;
+}
+
+.menu-img {
+    width:300px;
+}
+
+.menu-card {
+    width: 314px;
+    height: 214px;
+    border: solid 7px rgb(85 67 19);
+    background-color: rgba(255, 255, 255);
+    border-radius: 9px;
+    transition: transform .2s;
+    color: white;
+    font-size: 30px;
+    display: flex;
+}
+
+.card1 {
+    background-image: url("img/parker-burchfield-tvG4WvjgsEY-unsplash.jpg");
+    background-size:cover;
+}
+
+.card2 {
+    background-image: url("img/harprit-bola-HmREZuu4XuY-unsplash.jpg");
+    background-size: cover;
+}
+
+.card3 {
+    background-image: url("img/volodymyr-hryshchenko-V5vqWC9gyEU-unsplash.jpg");
+    background-size: cover;
+}
+
+.menu-container {
+    height: 214px;
+    display: flex;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.menu-link {
+    transition: transform .2s;
+    text-decoration:none
+}
+
+.menu-card:hover {
+    transform: scale(1.01);
+}
+
+.menu-text {
+    text-align: center;
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.5);
+    margin: auto;
+    border-radius: 4px;
 }

@@ -39,23 +39,28 @@
                         <li>@Html.ActionLink("Browse Products", "Index", "products", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("About", "Index", "aboutUs", new { area = "" }, new { @class = "nav-link" })</li>
                         <li>@Html.ActionLink("Contact", "Index", "userQuery", new { area = "" }, new { @class = "nav-link" })</li>
-                        <li>@Html.ActionLink("MyCart", "CustomerCart", "shoppingCart", new { area = "" }, new { @class = "nav-link" })</li>
                     }
                 </ul>
 
-                    <ul class="navbar-nav flex-grow-1" style="float:right !important">
-                        @if (Session["UsernameSS"] != null)
-                        {
-                            <li><p style="color:white;margin-top:15px;">Hello @Session["UsernameSS"]</p></li>
-                            <li style="padding-top:7px;">@Html.ActionLink("Logout", "Logout", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
-                        }
-                        else
-                        {
-                            <li>@Html.ActionLink("Register", "Register", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
-                            <li>@Html.ActionLink("Login", "Login", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
-                        }
+                <ul class="navbar-nav flex-grow-1" style="float:right !important">
+                    @if (Session["UsernameSS"] != null)
+                    {
+                        <li>
+                            <a href="/CustomerCart">
+                                <img alt="shopping cart" style="width:25px; margin:15px;"
+                                     src="~/Content/img/cart.png" title="search" />
+                            </a>
+                        </li>
+                        <li><p style="color:white;margin-top:15px;">Hello! @Session["UsernameSS"]</p></li>
+                        <li style="padding-top:7px;">@Html.ActionLink("Logout", "Logout", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                    else
+                    {
+                        <li>@Html.ActionLink("Register", "Register", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                        <li>@Html.ActionLink("Login", "Login", "loginRegister", new { area = "" }, new { @class = "nav-link" })</li>
+                    }
+                </ul>
 
-                    </ul>
                 </div>
 
         </div>
@@ -65,6 +70,7 @@
         <hr />
         <footer>
             <p>&copy; @DateTime.Now.Year - iCLOTHING Inc. (Group 11)</p>
+            <a href="https://www.flaticon.com/free-icons/cart" title="cart icons">Cart icons created by Pixel perfect - Flaticon</a>
         </footer>
     </div>
 
