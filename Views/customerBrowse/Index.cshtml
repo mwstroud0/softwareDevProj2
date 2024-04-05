@@ -104,7 +104,7 @@
                 <div style="padding:10%;padding-left:15%;">
                     @if (Session["UsernameSS"] != null)
                     {
-                        <button style="margin-right: 5%;">Add to cart</button>
+                        @Html.ActionLink("Add to cart", "AddToCart", new { id = item.productID })
                     }
                     @Html.ActionLink("Details", "Details", new { id = item.productID })
                 </div>
@@ -126,6 +126,16 @@
         </div>
 
     }
+</div>
+<div>
+
+    <!--foreach (var item in Session["cart"].ToString().ToList())
+            {
+                <div>
+                    //item
+                </div>
+            }
+        -->
 </div>
 
 

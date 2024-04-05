@@ -34,6 +34,7 @@ namespace Group11_iCLOTHINGApp.Models
         public virtual DbSet<EMAIL> EMAIL { get; set; }
         public virtual DbSet<ITEM_DELIVERY> ITEM_DELIVERY { get; set; }
         public virtual DbSet<ORDER_STATUS> ORDER_STATUS { get; set; }
+        public virtual DbSet<ITEM> ITEM { get; set; }
         public virtual DbSet<PRODUCT> PRODUCT { get; set; }
         public virtual DbSet<SHOPPING_CART> SHOPPING_CART { get; set; }
         public virtual DbSet<USER_COMMENTS> USER_COMMENTS { get; set; }
