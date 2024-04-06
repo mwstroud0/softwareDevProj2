@@ -26,30 +26,25 @@ namespace Group11_iCLOTHINGApp.Controllers
 
             if(itemsList == null || itemsList.Count == 0)
             {
-                //session cart is empty, do nothing
+                //session cart is empty, nothing to update
                 return RedirectToAction("Index", "customerBrowse");
             }
 
-            // add or overwrite the customers cart to the database
-            int custID = int.Parse(Session["idUsSS"].ToString());
-            var currentCart = db.SHOPPING_CART.Where(cart => cart.customerID == custID).ToList();
-            foreach (SHOPPING_CART cart in currentCart)
-            {
-                db.SHOPPING_CART.Remove(cart);
-            }
-            db.SaveChanges();
+            //create the SHOPPING_CART object, and fill values
+            // note: only functional to add one item
+            SHOPPING_CART cART = new SHOPPING_CART();
+            cART.cartID = db.SHOPPING_CART.Count() + 1;
+            cART.customerID = int.Parse(Session["idUsSS"].ToString());
+            cART.productID = itemsList[0].productID;
+            cART.cartProductQty = itemsList[0].itemQty;
+            cART.cartProductPrice = (int)itemsList[0].productPrice;
 
-            foreach (ITEM item in itemsList)
+            //add the object to the db
+            if (ModelState.IsValid)
             {
-                SHOPPING_CART cART = new SHOPPING_CART();
-                cART.cartID = db.SHOPPING_CART.Count() + 1;
-                cART.customerID = int.Parse(Session["idUsSS"].ToString());
-                cART.productID = item.productID;
-                cART.cartProductPrice = (int)item.productPrice;
-                cART.cartProductQty = item.itemQty;
                 db.SHOPPING_CART.Add(cART);
+                db.SaveChanges();
             }
-            db.SaveChanges();
 
             return RedirectToAction("Index", "customerBrowse");
         }

@@ -16,14 +16,37 @@ namespace Group11_iCLOTHINGApp.Controllers
 
         public ActionResult CustomerCart()
         {
-            List<ITEM> itemList = (List<ITEM>)Session["cart"];
+            var itemsList = new List<ITEM>();
+            int customerID = int.Parse(Session["idUsSS"].ToString());
 
-            if(itemList == null)
+            SHOPPING_CART cART = db.SHOPPING_CART.Where(c => c.customerID == customerID).FirstOrDefault();
+
+            if(cART == null)
             {
-                itemList = new List<ITEM>();
-                Session["cart"] = itemList;
+                itemsList = new List<ITEM>();
+                Session["cart"] = itemsList;
             }
-            return View("~/Views/ShoppingCart/CustomerCart.cshtml", itemList);
+            else
+            {
+                //note: we don't loop here since we do not have the functionality to support adding multiple products to the cart
+                //  we use a List<ITEM> rather than ITEM to continue support for previously written code
+
+                PRODUCT product = db.PRODUCT.Where(p => p.productID == cART.productID).FirstOrDefault();
+                ITEM item = new ITEM();
+                item.productID = product.productID;
+                item.brandID = product.brandID;
+                item.categoryID = product.categoryID;
+                item.adminID = product.adminID;
+                item.departmentID = product.departmentID;
+                item.productName = product.productName;
+                item.productDescription = product.productDescription;
+                item.productPrice = product.productPrice;
+                item.itemQty = (int)cART.cartProductQty;
+                item.productQty = product.productQty;
+
+                itemsList.Add(item);
+            }
+            return View("~/Views/ShoppingCart/CustomerCart.cshtml", itemsList);
         }
 
         // GET: customerBrowse
