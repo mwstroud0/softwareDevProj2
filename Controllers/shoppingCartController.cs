@@ -16,6 +16,25 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        public void UpdateStatus(string status, int cartID)
+        {
+            //create new ORDER_STATUS object and fill in values
+            ORDER_STATUS orderStatus = new ORDER_STATUS();
+            orderStatus.statusID = db.ORDER_STATUS.Count() + 1;
+            orderStatus.cartID = cartID;
+            orderStatus.orderStatus = status;
+            orderStatus.statusDate = DateTime.Now;
+
+            //store the ORDER_STATUS object in the database          
+            db.ORDER_STATUS.Add(orderStatus);
+            db.SaveChanges();
+        }
+
+        public ActionResult EnterInfo()
+        {
+            return View();
+        }
+
         // call this method after modifying the cart to update/store the current shopping cart
         public ActionResult UpdateCart()
         {
