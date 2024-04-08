@@ -96,6 +96,104 @@ namespace Group11_iCLOTHINGApp.Controllers
             return View(sHOPPING_CART.ToList());
         }
 
+        public ActionResult CustomerCart()
+        {
+            if (Session["idUsSS"] == null)
+            {
+                return RedirectToAction("Login", "loginRegister");
+            }
+            SHOPPING_CART sHOPPING = db.SHOPPING_CART.First();
+
+            if(sHOPPING == null)
+            {
+                Session["cartCount"] = 0;
+            } else
+            {
+                Session["cartCount"] = sHOPPING.cartProductQty;
+            }
+
+            int id = int.Parse(Session["idUsSS"].ToString());
+
+            var sHOPPING_CART = db.SHOPPING_CART.Include(s => s.CUSTOMER).Include(s => s.PRODUCT).Where(s => s.customerID.Equals(id));
+            return View(sHOPPING_CART.ToList());
+        }
+
+        public ActionResult Increment()
+        {
+            SHOPPING_CART sHOPPING = db.SHOPPING_CART.First();
+            PRODUCT pRODUCT = db.PRODUCT.Find(sHOPPING.productID);
+
+            sHOPPING.cartProductQty++;
+            sHOPPING.cartProductPrice = sHOPPING.cartProductQty * (int) pRODUCT.productPrice;
+            Session["cartCount"] = sHOPPING.cartProductQty;
+
+            if (ModelState.IsValid)
+            {
+                db.Entry(sHOPPING).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException e)
+                {
+                    Exception raise = e;
+                    foreach (var validationErrs in e.EntityValidationErrors)
+                    {
+                        foreach (var validationErr in validationErrs.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
+                                validationErr.ErrorMessage, sHOPPING.cartID, sHOPPING.productID);
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
+            }
+            return RedirectToAction("CustomerCart", "customerBrowse");
+        }
+
+        public ActionResult Decrement()
+        {
+            
+            SHOPPING_CART sHOPPING = db.SHOPPING_CART.First();
+            PRODUCT pRODUCT = db.PRODUCT.Find(sHOPPING.productID);
+
+            sHOPPING.cartProductQty--;
+            sHOPPING.cartProductPrice = sHOPPING.cartProductQty * (int) pRODUCT.productPrice;
+            Session["cartCount"] = sHOPPING.cartProductQty;
+
+            if (sHOPPING.cartProductQty <= 0)
+            {
+                db.SHOPPING_CART.Remove(sHOPPING);
+                db.SaveChanges();
+                return RedirectToAction("CustomerCart", "customerBrowse");
+            }
+
+            if (ModelState.IsValid)
+            {
+                db.Entry(sHOPPING).State = EntityState.Modified;
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException e)
+                {
+                    Exception raise = e;
+                    foreach (var validationErrs in e.EntityValidationErrors)
+                    {
+                        foreach (var validationErr in validationErrs.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
+                                validationErr.ErrorMessage, sHOPPING.cartID, sHOPPING.productID);
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
+            }
+            return RedirectToAction("CustomerCart", "customerBrowse");
+        }
+
         // GET: SHOPPING_CART/Details/5
         public ActionResult Details(int id)
         {
@@ -225,19 +323,6 @@ namespace Group11_iCLOTHINGApp.Controllers
             db.SHOPPING_CART.Remove(sHOPPING_CART);
             db.SaveChanges();
             return RedirectToAction("Index");
-        }
-
-        public ActionResult CustomerCart()
-        {
-            if (Session["idUsSS"] == null)
-            {
-                return RedirectToAction("Login", "loginRegister");
-            }
-
-            int id = int.Parse(Session["idUsSS"].ToString());
-
-            var sHOPPING_CART = db.SHOPPING_CART.Include(s => s.CUSTOMER).Include(s => s.PRODUCT).Where(s => s.customerID.Equals(id));
-            return View(sHOPPING_CART.ToList());
         }
 
         protected override void Dispose(bool disposing)

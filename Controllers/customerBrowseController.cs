@@ -46,7 +46,8 @@ namespace Group11_iCLOTHINGApp.Controllers
 
                 itemsList.Add(item);
             }
-            return View("~/Views/ShoppingCart/CustomerCart.cshtml", itemsList);
+            var model = new Tuple<IEnumerable<ITEM>, SHOPPING_CART>(itemsList, cART);
+            return View("~/Views/ShoppingCart/CustomerCart.cshtml", model);
         }
 
         // GET: customerBrowse
@@ -226,6 +227,7 @@ namespace Group11_iCLOTHINGApp.Controllers
                 newItem.itemQty = 1; // Just added 1 to the count
 
                 itemList.Add(newItem);
+                Session["cartCount"] = 1;
             }
             else
             {
@@ -259,6 +261,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             }
 
             Session["cart"] = itemList;
+            Session["cartCount"] = 1;
 
             return RedirectToAction("UpdateCart", "shoppingCart");
         }

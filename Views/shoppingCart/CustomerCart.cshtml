@@ -1,4 +1,5 @@
-﻿@model IEnumerable<Group11_iCLOTHINGApp.Models.ITEM>
+﻿@using Group11_iCLOTHINGApp.Models;
+@model Tuple< IEnumerable<ITEM>, SHOPPING_CART>
 
 @{
     ViewBag.Title = "Customer Cart";
@@ -6,49 +7,53 @@
 
 <h2>Shopping Cart</h2>
 
-<p>
-    @Html.ActionLink("Check Out", "Index", "paymentInfo")
-</p>
-
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.productName)
+            @Html.DisplayNameFor(tuple => tuple.Item1.First().productName)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.itemQty)
+            @Html.DisplayNameFor(tuple => tuple.Item1.First().itemQty)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.brandID)
+            @Html.DisplayNameFor(tuple => tuple.Item1.First().brandID)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.productDescription)
+            @Html.DisplayNameFor(tuple => tuple.Item1.First().productDescription)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.productPrice)
-        </th>
-        <th></th>
-    </tr>
 
-    @foreach (var item in Model)
+            @Html.DisplayNameFor(tuple => tuple.Item2.cartProductPrice)
+        </th>
+    </tr>
+    @if (Model.Item1.Count() != 0)
     {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.productName)
+                @Html.DisplayFor(modelItem => Model.Item1.First().productName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.itemQty)
+                @Html.DisplayFor(modelItem => Model.Item1.First().itemQty)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.brandID)
+                @Html.DisplayFor(modelItem => Model.Item1.First().brandID)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.productDescription)
+                @Html.DisplayFor(modelItem => Model.Item1.First().productDescription)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.productPrice)
+                $@Html.DisplayFor(modelItem => Model.Item2.cartProductPrice)
+            </td>
+            <td>
+                @Html.ActionLink("+", "Increment", "shoppingCart")
+                @Html.ActionLink("-", "Decrement", "shoppingCart")
             </td>
         </tr>
     }
-
-</table>
+    </table>
+@if (Session["cartCount"] != null && (int)Session["cartCount"] != 0)
+{
+    <p>
+        @Html.ActionLink("Check Out", "Index", "paymentInfo")
+    </p>
+}
