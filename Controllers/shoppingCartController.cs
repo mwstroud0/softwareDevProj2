@@ -62,10 +62,27 @@ namespace Group11_iCLOTHINGApp.Controllers
             if (ModelState.IsValid)
             {
                 db.SHOPPING_CART.Add(cART);
-                db.SaveChanges();
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (System.Data.Entity.Validation.DbEntityValidationException e)
+                {
+                    Exception raise = e;
+                    foreach (var validationErrs in e.EntityValidationErrors)
+                    {
+                        foreach (var validationErr in validationErrs.ValidationErrors)
+                        {
+                            string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
+                                validationErr.ErrorMessage, cART.cartID, cART.productID);
+                            raise = new InvalidOperationException(message, raise);
+                        }
+                    }
+                    throw raise;
+                }
             }
 
-            return RedirectToAction("Index", "customerBrowse");
+            return RedirectToAction("CustomerCart", "customerBrowse");
         }
 
         // GET: SHOPPING_CART

@@ -148,12 +148,14 @@
     <Compile Include="Controllers\aboutUsController.cs" />
     <Compile Include="Controllers\administratorsController.cs" />
     <Compile Include="Controllers\brandsController.cs" />
+    <Compile Include="Controllers\buyItemController.cs" />
     <Compile Include="Controllers\categoriesController.cs" />
     <Compile Include="Controllers\customerBrowseController.cs" />
     <Compile Include="Controllers\customersController.cs" />
     <Compile Include="Controllers\departmentsController.cs" />
     <Compile Include="Controllers\loginRegisterController.cs" />
     <Compile Include="Controllers\homeController.cs" />
+    <Compile Include="Controllers\paymentInfoController.cs" />
     <Compile Include="Controllers\productsController.cs" />
     <Compile Include="Controllers\shoppingCartController.cs" />
     <Compile Include="Controllers\userCommentsController.cs" />
@@ -352,6 +354,12 @@
     <Content Include="Views\customerBrowse\Edit.cshtml" />
     <Content Include="Views\customerBrowse\Index.cshtml" />
     <Content Include="Views\customerBrowse\Search.cshtml" />
+    <Content Include="Views\paymentInfo\Create.cshtml" />
+    <Content Include="Views\paymentInfo\Delete.cshtml" />
+    <Content Include="Views\paymentInfo\Details.cshtml" />
+    <Content Include="Views\paymentInfo\Edit.cshtml" />
+    <Content Include="Views\paymentInfo\Index.cshtml" />
+    <Content Include="Views\shoppingCart\EnterInfo.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
