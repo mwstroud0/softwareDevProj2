@@ -14,6 +14,32 @@ namespace Group11_iCLOTHINGApp.Controllers
     {
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
+        public ActionResult UpdateProductQuantity(int productID)
+        {
+            int custID = int.Parse(Session["idUsSS"].ToString());
+            SHOPPING_CART cart = db.SHOPPING_CART.Where(c => c.customerID == custID).FirstOrDefault();
+
+            int numOrdered = (int)cart.cartProductQty;
+
+            db.PRODUCT.Find(productID).productQty -= numOrdered;
+            db.SaveChanges();
+
+            if(db.PRODUCT.Find(productID).productQty <= 0)
+            {
+                return RedirectToAction("ProductOutOfStock", new { productID = productID });
+            }
+
+            return View("paymentSuccess", "paymentInfo");
+        }
+
+        public ActionResult ProductOutOfStock(int productID)
+        {
+            //notify admin
+            //send email
+
+            return View("PaymentSuccess", "PaymentInfo");
+        }
+
         // GET: PRODUCTs
         public ActionResult Index()
         {

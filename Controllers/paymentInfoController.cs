@@ -33,10 +33,10 @@ namespace Group11_iCLOTHINGApp.Controllers
             iTEM_DELIVERY.stickerID = db.ITEM_DELIVERY.Count() + 2;
             iTEM_DELIVERY.productID = shoppingCart[0].productID;
 
-
             if (ModelState.IsValid) {
                 db.ITEM_DELIVERY.Add(iTEM_DELIVERY);
                 db.SaveChanges();
+                return RedirectToAction("UpdateProductQuantity", "products", new { productID = iTEM_DELIVERY.productID });
             }
             return View();
         }
@@ -50,6 +50,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             String cvv = formCollection["cvv"];
             String streetAddress = formCollection["saddress"];
             String billingAddress = formCollection["baddress"];
+
             return RedirectToAction("paymentSuccess");
         }
 
