@@ -4,60 +4,38 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h2>Check out</h2>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.customerName)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.customerShippingAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.customerBillingAddress)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.customerDOB)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.customerGender)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.USER_PASSWORD.userAccountName)
-        </th>
-        <th></th>
-    </tr>
+@using (Html.BeginForm("Submit", "paymentInfo", FormMethod.Post))
+{
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.customerName)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.customerShippingAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.customerBillingAddress)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.customerDOB)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.customerGender)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.USER_PASSWORD.userAccountName)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.customerID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.customerID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.customerID })
-        </td>
-    </tr>
+    <div>
+        <label class="form-label">Cardholder Name:</label>
+        <input class="form-control" type="text" id="name" name="name" required />
+    </div>
+    <div>
+        <label class="form-label">Card number:</label>
+        <input class="form-control" type="number" id="cardnumber" name="cardnumber" required />
+    </div>
+    <div>
+        <label class="form-label">Expiry date: ("MM/YY")</label>
+        <input class="form-control" type="text" id="expiry" name="expiry" required />
+    </div>
+    <div>
+        <label class="form-label">CVV:</label>
+        <input class="form-control" type="number" id="cvv" name="cvv" required />
+    </div>
+    <div>
+        <label class="form-label">Shipping Address ("Street, City, State")</label>
+        <input class="form-control" type="text" id="saddress" name="saddress" required />
+    </div>
+    <div>
+        <label class="form-label">Billing Address ("Street, City, State")</label>
+        <input class="form-control" type="text" id="baddress" name="baddress" required />
+    </div>
+    <button class="btn btn-secondary" type="submit">Submit payment</button>
 }
 
-</table>
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

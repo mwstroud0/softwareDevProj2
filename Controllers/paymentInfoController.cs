@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Security.Cryptography;
 using System.Web;
 using System.Web.Mvc;
 using Group11_iCLOTHINGApp.Models;
@@ -19,6 +20,36 @@ namespace Group11_iCLOTHINGApp.Controllers
         {
             var cUSTOMER = db.CUSTOMER.Include(c => c.USER_PASSWORD);
             return View(cUSTOMER.ToList());
+        }
+        public ActionResult paymentSuccess()
+        {
+            var shoppingCart = (List<ITEM>)Session["cart"];
+            int customerID = int.Parse(Session["idUsSS"].ToString());
+    
+            var iTEM_DELIVERY = new ITEM_DELIVERY();
+            iTEM_DELIVERY.customerID = customerID;
+            iTEM_DELIVERY.stickerDate = DateTime.Now;
+            iTEM_DELIVERY.stickerID = iTEM_DELIVERY.customerID + 1;
+            iTEM_DELIVERY.productID = shoppingCart[0].productID;
+
+
+            if (ModelState.IsValid) {
+                db.ITEM_DELIVERY.Add(iTEM_DELIVERY);
+                db.SaveChanges();
+            }
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Submit(FormCollection formCollection)
+        {
+            String name = formCollection["name"];
+            String cardNumber = formCollection["cardnumber"];
+            String expiryDate = formCollection["expiry"];
+            String cvv = formCollection["cvv"];
+            String streetAddress = formCollection["saddress"];
+            String billingAddress = formCollection["baddress"];
+            return RedirectToAction("paymentSuccess");
         }
 
         // GET: paymentInfo/Details/5
