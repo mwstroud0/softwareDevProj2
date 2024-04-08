@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Net;
 using System.Security.Cryptography;
+using System.Threading;
 using System.Web;
 using System.Web.Mvc;
 using Group11_iCLOTHINGApp.Models;
@@ -29,7 +30,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             var iTEM_DELIVERY = new ITEM_DELIVERY();
             iTEM_DELIVERY.customerID = customerID;
             iTEM_DELIVERY.stickerDate = DateTime.Now;
-            iTEM_DELIVERY.stickerID = iTEM_DELIVERY.customerID + 1;
+            iTEM_DELIVERY.stickerID = db.ITEM_DELIVERY.Count() + 2;
             iTEM_DELIVERY.productID = shoppingCart[0].productID;
 
 
