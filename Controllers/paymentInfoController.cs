@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.Entity;
 using System.Linq;
 using System.Net;
+using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Threading;
 using System.Web;
@@ -33,10 +34,13 @@ namespace Group11_iCLOTHINGApp.Controllers
             iTEM_DELIVERY.stickerID = db.ITEM_DELIVERY.Count() + 2;
             iTEM_DELIVERY.productID = shoppingCart[0].productID;
 
+            int adminID = db.ADMINISTRATOR.First().adminID;
 
             if (ModelState.IsValid) {
                 db.ITEM_DELIVERY.Add(iTEM_DELIVERY);
                 db.SaveChanges();
+                SendEmailToAdministrator(customerID, adminID);
+                SendEmailToCustomer(customerID, adminID);
             }
             return View();
         }
@@ -150,6 +154,92 @@ namespace Group11_iCLOTHINGApp.Controllers
             db.CUSTOMER.Remove(cUSTOMER);
             db.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        private void SendEmailToCustomer(int customerID, int adminID)
+        {
+            // First save data in the DB
+            DateTime emailDate = DateTime.Today;
+            string subject = "Order Confirmed: ";
+            string body = "Thank you for shopping with iClothing!\r\nYour order has successfully gone through and your product will be with you shortly!";
+
+            EMAIL email = new EMAIL();
+            email.customerID = customerID;
+            email.adminID = adminID;
+            email.emailNo = db.EMAIL.ToList().Count() + 1;
+            email.emailDate = emailDate;
+            email.emailSubject = subject;
+            email.emailBody = body;
+
+            if (ModelState.IsValid)
+            {
+                db.EMAIL.Add(email);
+                db.SaveChanges();
+            }
+            // The deal with gmail is it makes you go to your account, set up 2 factor authentication with gives you the ability to then
+            // create an app password. Once you create one, it will give you a generated app password.
+
+            // 
+            string host = "smtp.gmail.com";
+            var fromAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress("group11project2@gmail.com");
+            string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
+
+            
+
+            var smtpClient = new SmtpClient(host)
+            {
+                Port = 587,
+                EnableSsl = true,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, app_password),
+            };
+
+            smtpClient.Send(fromAddress.Address, toAddress.Address, subject, body);
+        
+        }
+
+        private void SendEmailToAdministrator(int customerID, int adminID)
+        {
+            // First save data in the DB
+            DateTime emailDate = DateTime.Today;
+            string subject = "New Order Placed: ";
+            string body = "An order has successfully gone through.";
+
+            EMAIL email = new EMAIL();
+            email.customerID = customerID;
+            email.adminID = adminID;
+            email.emailNo = db.EMAIL.ToList().Count() + 1;
+            email.emailDate = emailDate;
+            email.emailSubject = subject;
+            email.emailBody = body;
+
+            if (ModelState.IsValid)
+            {
+                db.EMAIL.Add(email);
+                db.SaveChanges();
+            }
+            // The deal with gmail is it makes you go to your account, set up 2 factor authentication with gives you the ability to then
+            // create an app password. Once you create one, it will give you a generated app password.
+
+            // 
+            string host = "smtp.gmail.com";
+            var fromAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress("group11project2@gmail.com");
+            string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
+
+
+
+            var smtpClient = new SmtpClient(host)
+            {
+                Port = 587,
+                EnableSsl = true,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, app_password),
+            };
+
+            smtpClient.Send(fromAddress.Address, toAddress.Address, subject, body);
+
         }
 
         protected override void Dispose(bool disposing)

@@ -97,9 +97,6 @@ namespace Group11_iCLOTHINGApp.Controllers
                 .SqlQuery<string>(selectQueryString, new SqlParameter("@Username", enteredUsername))
                 .FirstOrDefault();
 
-            Debug.WriteLine("MADE IT HERE");
-            Debug.WriteLine(encryptedPassword);
-
             var checkLogin = false;
             if (encryptedPassword != null)
             {
