@@ -17,27 +17,14 @@ namespace Group11_iCLOTHINGApp.Controllers
         public ActionResult UpdateProductQuantity(int productID)
         {
             int custID = int.Parse(Session["idUsSS"].ToString());
-            SHOPPING_CART cart = db.SHOPPING_CART.Where(c => c.customerID == custID).FirstOrDefault();
+            SHOPPING_CART cart = db.SHOPPING_CART.Find(Session["cartID"]);
 
             int numOrdered = (int)cart.cartProductQty;
 
             db.PRODUCT.Find(productID).productQty -= numOrdered;
             db.SaveChanges();
 
-            if(db.PRODUCT.Find(productID).productQty <= 0)
-            {
-                return RedirectToAction("ProductOutOfStock", new { productID = productID });
-            }
-
-            return View("paymentSuccess", "paymentInfo");
-        }
-
-        public ActionResult ProductOutOfStock(int productID)
-        {
-            //notify admin
-            //send email
-
-            return View("PaymentSuccess", "PaymentInfo");
+            return RedirectToAction("paymentSuccess", "paymentInfo");
         }
 
         // GET: PRODUCTs

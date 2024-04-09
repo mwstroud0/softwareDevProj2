@@ -25,23 +25,41 @@ namespace Group11_iCLOTHINGApp.Controllers
         }
         public ActionResult paymentSuccess()
         {
-            var shoppingCart = (List<ITEM>)Session["cart"];
+            SHOPPING_CART shoppingCart = db.SHOPPING_CART.Find(Session["cartID"]);
+            PRODUCT pRODUCT = db.PRODUCT.Find(shoppingCart.productID);
             int customerID = int.Parse(Session["idUsSS"].ToString());
     
             var iTEM_DELIVERY = new ITEM_DELIVERY();
             iTEM_DELIVERY.customerID = customerID;
             iTEM_DELIVERY.stickerDate = DateTime.Now;
             iTEM_DELIVERY.stickerID = db.ITEM_DELIVERY.Count() + 2;
-            iTEM_DELIVERY.productID = shoppingCart[0].productID;
+            iTEM_DELIVERY.productID = shoppingCart.productID;
 
             int adminID = db.ADMINISTRATOR.First().adminID;
 
+            pRODUCT.productQty = pRODUCT.productQty - (int) shoppingCart.cartProductQty;
+
+            DateTime orderDate = DateTime.Today;
+            int orderID = db.ORDER_STATUS.Count() + 1;
+
+            ORDER_STATUS orderStatus = new ORDER_STATUS();
+            orderStatus.statusID = orderID;
+            orderStatus.adminID = adminID;
+            orderStatus.cartID = shoppingCart.cartID;
+            orderStatus.orderStatus = "paid";
+            orderStatus.statusDate = orderDate;
+
             if (ModelState.IsValid) {
                 db.ITEM_DELIVERY.Add(iTEM_DELIVERY);
+                db.Entry(pRODUCT).State = EntityState.Modified;
+                db.ORDER_STATUS.Add(orderStatus);
                 db.SaveChanges();
-                return RedirectToAction("UpdateProductQuantity", "products", new { productID = iTEM_DELIVERY.productID });
                 SendEmailToAdministrator(customerID, adminID);
                 SendEmailToCustomer(customerID, adminID);
+                if (pRODUCT.productQty == 0)
+                {
+                    SendEmailOutOfStock(customerID, adminID, pRODUCT.productID);
+                }
             }
             return View();
         }
@@ -56,7 +74,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             String streetAddress = formCollection["saddress"];
             String billingAddress = formCollection["baddress"];
 
-            return RedirectToAction("paymentSuccess");
+            return RedirectToAction("paymentSuccess", "paymentInfo");
         }
 
         // GET: paymentInfo/Details/5
@@ -207,6 +225,49 @@ namespace Group11_iCLOTHINGApp.Controllers
             DateTime emailDate = DateTime.Today;
             string subject = "New Order Placed: ";
             string body = "An order has successfully gone through.";
+
+            EMAIL email = new EMAIL();
+            email.customerID = customerID;
+            email.adminID = adminID;
+            email.emailNo = db.EMAIL.ToList().Count() + 1;
+            email.emailDate = emailDate;
+            email.emailSubject = subject;
+            email.emailBody = body;
+
+            if (ModelState.IsValid)
+            {
+                db.EMAIL.Add(email);
+                db.SaveChanges();
+            }
+            // The deal with gmail is it makes you go to your account, set up 2 factor authentication with gives you the ability to then
+            // create an app password. Once you create one, it will give you a generated app password.
+
+            // 
+            string host = "smtp.gmail.com";
+            var fromAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress("group11project2@gmail.com");
+            string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
+
+
+
+            var smtpClient = new SmtpClient(host)
+            {
+                Port = 587,
+                EnableSsl = true,
+                UseDefaultCredentials = false,
+                Credentials = new NetworkCredential(fromAddress.Address, app_password),
+            };
+
+            smtpClient.Send(fromAddress.Address, toAddress.Address, subject, body);
+
+        }
+
+        private void SendEmailOutOfStock(int customerID, int adminID, int productId)
+        {
+            // First save data in the DB
+            DateTime emailDate = DateTime.Today;
+            string subject = "ITEM OUT OF STOCK";
+            string body = "The following product id is out of stock: " + productId.ToString();
 
             EMAIL email = new EMAIL();
             email.customerID = customerID;

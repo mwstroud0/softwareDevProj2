@@ -65,6 +65,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
                 Session["idUsSS"] = uSER_PASSWORD.userID.ToString();
                 Session["UsernameSS"] = uSER_PASSWORD.userAccountName.ToString();
+                Session["cartCount"] = 0;
                 return RedirectToAction("Index", "Home");
 
             }
@@ -115,6 +116,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
                 Session["idUsSS"] = id;
                 Session["UsernameSS"] = uSER_PASSWORD.userAccountName.ToString();
+                Session["cartCount"] = 0;
                 return RedirectToAction("Index", "Home");
             } else
             {

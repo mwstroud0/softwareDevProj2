@@ -65,6 +65,7 @@ namespace Group11_iCLOTHINGApp.Controllers
                 try
                 {
                     db.SaveChanges();
+                    Session["cartID"] = cART.cartID;
                 }
                 catch (System.Data.Entity.Validation.DbEntityValidationException e)
                 {
@@ -120,42 +121,49 @@ namespace Group11_iCLOTHINGApp.Controllers
 
         public ActionResult Increment()
         {
-            SHOPPING_CART sHOPPING = db.SHOPPING_CART.First();
+            SHOPPING_CART sHOPPING = db.SHOPPING_CART.Find(Session["cartID"]);
             PRODUCT pRODUCT = db.PRODUCT.Find(sHOPPING.productID);
 
-            sHOPPING.cartProductQty++;
-            sHOPPING.cartProductPrice = sHOPPING.cartProductQty * (int) pRODUCT.productPrice;
-            Session["cartCount"] = sHOPPING.cartProductQty;
-
-            if (ModelState.IsValid)
+            if(sHOPPING.cartProductQty == pRODUCT.productQty)
             {
-                db.Entry(sHOPPING).State = EntityState.Modified;
-                try
+                TempData["shortMessage"] = "Cannot buy any more of this item. OUT OF STOCK.";
+                return RedirectToAction("CustomerCart", "customerBrowse");
+            } else
+            {
+                sHOPPING.cartProductQty++;
+                sHOPPING.cartProductPrice = sHOPPING.cartProductQty * (int)pRODUCT.productPrice;
+                Session["cartCount"] = sHOPPING.cartProductQty;
+
+                if (ModelState.IsValid)
                 {
-                    db.SaveChanges();
-                }
-                catch (System.Data.Entity.Validation.DbEntityValidationException e)
-                {
-                    Exception raise = e;
-                    foreach (var validationErrs in e.EntityValidationErrors)
+                    db.Entry(sHOPPING).State = EntityState.Modified;
+                    try
                     {
-                        foreach (var validationErr in validationErrs.ValidationErrors)
-                        {
-                            string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
-                                validationErr.ErrorMessage, sHOPPING.cartID, sHOPPING.productID);
-                            raise = new InvalidOperationException(message, raise);
-                        }
+                        db.SaveChanges();
                     }
-                    throw raise;
+                    catch (System.Data.Entity.Validation.DbEntityValidationException e)
+                    {
+                        Exception raise = e;
+                        foreach (var validationErrs in e.EntityValidationErrors)
+                        {
+                            foreach (var validationErr in validationErrs.ValidationErrors)
+                            {
+                                string message = string.Format("{0}:{1}:{2}:{3}", validationErrs.Entry.Entity.ToString(),
+                                    validationErr.ErrorMessage, sHOPPING.cartID, sHOPPING.productID);
+                                raise = new InvalidOperationException(message, raise);
+                            }
+                        }
+                        throw raise;
+                    }
                 }
+                return RedirectToAction("CustomerCart", "customerBrowse");
             }
-            return RedirectToAction("CustomerCart", "customerBrowse");
         }
 
         public ActionResult Decrement()
         {
             
-            SHOPPING_CART sHOPPING = db.SHOPPING_CART.First();
+            SHOPPING_CART sHOPPING = db.SHOPPING_CART.Find(Session["cartID"]);
             PRODUCT pRODUCT = db.PRODUCT.Find(sHOPPING.productID);
 
             sHOPPING.cartProductQty--;

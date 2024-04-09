@@ -16,6 +16,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 
         public ActionResult CustomerCart()
         {
+            ViewBag.notification = TempData["shortMessage"];    
             var itemsList = new List<ITEM>();
             int customerID = int.Parse(Session["idUsSS"].ToString());
 
