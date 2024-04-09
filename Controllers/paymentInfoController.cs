@@ -39,6 +39,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             if (ModelState.IsValid) {
                 db.ITEM_DELIVERY.Add(iTEM_DELIVERY);
                 db.SaveChanges();
+                return RedirectToAction("UpdateProductQuantity", "products", new { productID = iTEM_DELIVERY.productID });
                 SendEmailToAdministrator(customerID, adminID);
                 SendEmailToCustomer(customerID, adminID);
             }
@@ -54,6 +55,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             String cvv = formCollection["cvv"];
             String streetAddress = formCollection["saddress"];
             String billingAddress = formCollection["baddress"];
+
             return RedirectToAction("paymentSuccess");
         }
 

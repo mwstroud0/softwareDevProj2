@@ -102,7 +102,7 @@
             <div>
                 <img alt="Clothing image" src="~/Content/img/stockclothing.png" />
                 <div style="padding:10%;padding-left:15%;">
-                    @if (Session["UsernameSS"] != null)
+                    @if (Session["UsernameSS"] != null && item.productQty > 0)
                     {
                         @Html.ActionLink("Add to cart", "AddToCart", new { id = item.productID })
                     }
@@ -122,6 +122,10 @@
                     <p style="font-weight:bold;">Price:</p>
                     <p style="padding-left: 2%;">$@Html.DisplayFor(modelItem => item.productPrice)</p>
                 </div>
+                @if( item.productQty <= 0)
+                {
+                    <div style="color: red; font-weight: bold;">OUT OF STOCK</div>
+                }
             </div>
         </div>
 
