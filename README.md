@@ -39,7 +39,7 @@ CS_4320 Project 2: Implementing the iCLOTHING Application
      b) After the "=" sign and before the ";", type the name of your local server instead of the name given. Save the file.
    
 6) ** IMPORTANT ** After restarting Visual Studio, Click the solid green triangle with text "IIS Express (Microsoft Edge)" to launch the application.
-
+7) ** IMPORTANT ** USING THE EMAIL FUNCTIONALITY REQUIRES YOU TO EDIT A VARIABLE IN paymentInfoController: edit the sendEmailsTo variable to your email.
 ## Application Features 🦥
 No-Login User View: Users are able to browse products all while being signed out.
 
