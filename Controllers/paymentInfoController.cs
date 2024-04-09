@@ -15,6 +15,7 @@ namespace Group11_iCLOTHINGApp.Controllers
 {
     public class paymentInfoController : Controller
     {
+        public string sendEmailsTo = "group11project2@gmail.com";
         private Group11_iCLOTHINGDBEntities db = new Group11_iCLOTHINGDBEntities();
 
         // GET: paymentInfo
@@ -202,7 +203,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             // 
             string host = "smtp.gmail.com";
             var fromAddress = new MailAddress("group11project2@gmail.com");
-            var toAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress(this.sendEmailsTo);
             string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
 
             
@@ -245,7 +246,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             // 
             string host = "smtp.gmail.com";
             var fromAddress = new MailAddress("group11project2@gmail.com");
-            var toAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress(this.sendEmailsTo);
             string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
 
 
@@ -288,7 +289,7 @@ namespace Group11_iCLOTHINGApp.Controllers
             // 
             string host = "smtp.gmail.com";
             var fromAddress = new MailAddress("group11project2@gmail.com");
-            var toAddress = new MailAddress("group11project2@gmail.com");
+            var toAddress = new MailAddress(this.sendEmailsTo);
             string app_password = "xdqj qzmv zhjd odan"; // generated from gmail account
 
 
